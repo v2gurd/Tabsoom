@@ -1,0 +1,305 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#130c20">
+<title>یک جهان برای تبسم ♡</title>
+<style>
+:root{color-scheme:dark;--bg:#100b1b;--pink:#ff79b7;--rose:#ffc4df;--violet:#b6a0ff;--text:#fff5fb;--muted:#c6b6cf}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Tahoma,"Segoe UI",sans-serif;overflow-x:hidden}
+button{font:inherit;cursor:pointer;border:0}
+#universe{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;background:radial-gradient(ellipse at 18% 15%,#7c2b7350,transparent 34%),radial-gradient(ellipse at 85% 70%,#4e37a33b,transparent 38%),linear-gradient(140deg,#100b1b,#1b1028 55%,#100b1b)}
+#stars{position:absolute;width:100%;height:100%;inset:0}
+.orb{position:absolute;border-radius:50%;filter:blur(60px);opacity:.22;animation:orb 14s ease-in-out infinite alternate}
+.orb.a{width:230px;height:230px;background:#ff4f9a;top:15%;left:-80px}
+.orb.b{width:290px;height:290px;background:#7b5cff;right:-100px;bottom:8%;animation-delay:-6s}
+@keyframes orb{to{transform:translate(45px,-30px) scale(1.15)}}
+#app{position:relative;z-index:1}
+.nav{position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:20px clamp(18px,5vw,65px);font-size:.78rem;color:#e4d4e8;z-index:4}
+.brand{letter-spacing:.12em;color:var(--rose);font-weight:bold}
+.sound{background:#ffffff0b;color:var(--text);border:1px solid #ffffff20;border-radius:99px;padding:10px 14px}
+.hero{min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:100px 22px 75px;position:relative;overflow:hidden}
+.hero-inner{max-width:800px}
+.pill{display:inline-flex;gap:8px;align-items:center;border:1px solid #ffb8d733;background:#ff8cbe0d;border-radius:99px;padding:10px 15px;color:#ffd7e9;font-size:.75rem;backdrop-filter:blur(12px);animation:fadeUp 1s both}
+.spark{color:#ffe0a8;animation:blink 2s infinite}
+@keyframes blink{50%{opacity:.3;transform:scale(.8)}}
+h1{font-size:clamp(3.3rem,10vw,7.5rem);line-height:1.14;letter-spacing:-.06em;margin:28px 0 20px;font-weight:900}
+h1 .name{display:block;background:linear-gradient(110deg,#fff2f8 10%,#ff9cc9 38%,#c7b6ff 70%,#fff0d5 90%);background-size:220% auto;color:transparent;background-clip:text;-webkit-background-clip:text;animation:shine 6s linear infinite,fadeUp 1s .15s both}
+@keyframes shine{to{background-position:220% center}}
+.subtitle{font-size:clamp(.95rem,2.5vw,1.12rem);line-height:2.2;color:var(--muted);max-width:580px;margin:0 auto 30px;min-height:54px}
+.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.btn{padding:15px 23px;border-radius:99px;transition:.25s;position:relative;overflow:hidden}
+.btn:hover{transform:translateY(-4px) scale(1.025)}
+.main-btn{color:#34152a;font-weight:bold;background:linear-gradient(115deg,#ffe2ef,#ff83b9 55%,#d8c6ff);box-shadow:0 8px 35px #ff6fa83b}
+.line-btn{background:#ffffff08;color:#fff1f8;border:1px solid #ffffff26;backdrop-filter:blur(12px)}
+.scroll-hint{position:absolute;bottom:22px;left:0;right:0;font-size:.7rem;letter-spacing:.18em;color:#a99bb8;animation:bob 2s infinite}
+@keyframes bob{50%{transform:translateY(6px)}}
+section{max-width:1020px;margin:auto;padding:80px 22px;position:relative}
+.section-tag{text-align:center;color:var(--pink);font-size:.75rem;letter-spacing:.2em;font-weight:bold}
+.section-title{text-align:center;font-size:clamp(1.8rem,5vw,3.4rem);margin:14px 0 16px;letter-spacing:-.04em}
+.section-desc{text-align:center;color:var(--muted);line-height:2;max-width:600px;margin:0 auto 38px;font-size:.92rem}
+.glass{background:linear-gradient(135deg,#ffffff0e,#ffffff04);border:1px solid #ffffff18;box-shadow:0 24px 90px #00000028,inset 0 1px #ffffff10;backdrop-filter:blur(18px);border-radius:30px}
+.letter-wrap{max-width:740px;margin:auto;perspective:1000px}
+.letter{padding:clamp(25px,6vw,55px);text-align:center;line-height:2.35;font-size:1rem;position:relative;overflow:hidden}
+.letter:before{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:#ff72b716;filter:blur(25px);top:-80px;right:-60px}
+.letter .seal{font-size:2.2rem;display:block;margin-bottom:18px;filter:drop-shadow(0 0 20px #ff80ba77)}
+.letter p{position:relative;margin:0}
+.letter strong{color:#ffacd0}
+.letter .signature{display:block;margin-top:26px;color:#ffb7d8;font-size:1.1rem}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.mini{padding:28px 23px;min-height:210px;transition:transform .3s,border-color .3s;transform-style:preserve-3d}
+.mini:hover{transform:translateY(-8px) rotateX(2deg);border-color:#ff9bc955}
+.mini .ico{font-size:2rem;filter:drop-shadow(0 0 14px #ff75b955)}
+.mini h3{margin:18px 0 9px;font-size:1.02rem}
+.mini p{color:var(--muted);font-size:.86rem;line-height:2;margin:0}
+.memory-stage{max-width:760px;margin:auto;padding:30px;text-align:center}
+.memory-stage .big-heart{font-size:4rem;display:block;filter:drop-shadow(0 0 28px #ff75b977);animation:heartBeat 1.7s infinite}
+.memory-stage p{color:#eaddeb;line-height:2.2}
+.memory-stage .tiny{font-size:.76rem;color:var(--muted)}
+@keyframes heartBeat{0%,100%{transform:scale(1)}15%{transform:scale(1.13)}30%{transform:scale(1)}45%{transform:scale(1.08)}}
+.envelope-area{text-align:center;min-height:290px;display:flex;align-items:center;justify-content:center;flex-direction:column}
+.envelope{width:180px;height:125px;position:relative;margin:15px auto 25px;cursor:pointer;filter:drop-shadow(0 15px 30px #0005);transition:transform .35s}
+.envelope:hover{transform:translateY(-6px) rotate(-2deg)}
+.env-body{position:absolute;inset:0;background:linear-gradient(145deg,#ffb4d4,#e66eaa);border-radius:8px;clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}
+.env-flap{position:absolute;top:0;left:0;width:100%;height:75%;background:linear-gradient(145deg,#ffd5e7,#ff8cbd);clip-path:polygon(0 0,100% 0,50% 78%);transform-origin:top;transition:transform .65s;z-index:3}
+.env-letter{position:absolute;left:12px;right:12px;bottom:8px;height:85px;background:#fff4fa;border-radius:5px;z-index:1;transition:transform .65s;display:flex;align-items:center;justify-content:center;color:#b13f79;font-size:1.7rem}
+.envelope.open .env-flap{transform:rotateX(180deg);z-index:0}
+.envelope.open .env-letter{transform:translateY(-65px)}
+.tap-note{color:var(--muted);font-size:.8rem}
+#noteModal{position:fixed;inset:0;z-index:20;background:#090610d9;backdrop-filter:blur(16px);display:none;align-items:center;justify-content:center;padding:20px}
+#noteModal.show{display:flex;animation:fade .3s}
+.modal-card{width:min(580px,100%);padding:32px;text-align:center;animation:pop .45s both}
+.modal-card h3{font-size:1.7rem;color:#ffb6d5}
+.modal-card p{line-height:2.3;color:#eaddeb}
+.close{margin-top:10px}
+.timeline{max-width:680px;margin:auto;position:relative}
+.timeline:before{content:"";position:absolute;right:15px;top:12px;bottom:12px;width:1px;background:linear-gradient(transparent,#ff86bd,#b5a2ff,transparent)}
+.event{position:relative;padding:0 48px 28px 0}
+.event:before{content:"♡";position:absolute;right:4px;top:0;color:#ff9bc7;background:#21142c;border:1px solid #ff9bc755;width:23px;height:23px;border-radius:50%;display:grid;place-items:center;font-size:.8rem}
+.event h3{margin:0 0 7px;font-size:1rem}
+.event p{margin:0;color:var(--muted);font-size:.88rem;line-height:2}
+.final-card{padding:clamp(28px,6vw,58px);text-align:center;overflow:hidden;position:relative}
+.final-card h2{font-size:clamp(2rem,6vw,4rem);line-height:1.35}
+.final-card p{color:var(--muted);line-height:2.2;max-width:560px;margin:0 auto 25px}
+.choice-row{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.answer{margin-top:23px;min-height:55px;line-height:2;color:#ffb8d7;font-weight:bold}
+.footer{text-align:center;color:#94869f;padding:28px 20px 48px;font-size:.75rem;line-height:2}
+.footer span{color:#ff85ba}
+#toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,25px);opacity:0;z-index:30;background:#291831;border:1px solid #ff9bc755;color:#ffe7f3;padding:12px 18px;border-radius:99px;font-size:.85rem;transition:.3s;pointer-events:none;max-width:90%;text-align:center}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+.heart-float{position:fixed;bottom:-40px;z-index:15;pointer-events:none;animation:rise var(--dur,5s) linear forwards;font-size:var(--size,20px);filter:drop-shadow(0 0 9px #ff83bd88)}
+@keyframes rise{to{transform:translateY(-115vh) rotate(var(--rot,35deg));opacity:0}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes pop{from{transform:scale(.9) translateY(15px);opacity:0}to{transform:scale(1);opacity:1}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:680px){.cards{grid-template-columns:1fr}.mini{min-height:unset;padding:23px}.hero{min-height:94svh}.nav{padding:16px}.section-title{line-height:1.45}section{padding:65px 18px}.letter{font-size:.94rem}.memory-stage{padding:24px 18px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div id="universe"><canvas id="stars"></canvas><div class="orb a"></div><div class="orb b"></div></div>
+<main id="app">
+<nav class="nav"><div class="brand">♡ FOR TABSOM</div><button class="sound" id="sparkleBtn">✧ یه ذره جادو</button></nav>
+<header class="hero">
+<div class="hero-inner">
+<div class="pill"><span class="spark">✦</span> این گوشه از دنیا فقط برای توئه <span class="spark">✦</span></div>
+<h1>یه نفر هست که<br><span class="name">اسمش تبسمه ♡</span></h1>
+<p class="subtitle" id="typed"></p>
+<div class="actions"><button class="btn main-btn" onclick="goTo('letterSection')">نامه‌تو باز کن ♡</button><button class="btn line-btn" onclick="burstHearts(28);toast('این قلب‌ها همشون راهشون رو به سمت تو پیدا می‌کنن ♡')">ببارون قلبی ✨</button></div>
+</div><div class="scroll-hint">SCROLL TO FEEL THE LOVE　⌄</div>
+</header>
+
+<section id="letterSection" class="reveal">
+<div class="section-tag">CHAPTER 01 · حرف‌هایی که باید می‌گفتم</div>
+<h2 class="section-title">تبسم جان، این بار از تهِ دلم…</h2>
+<p class="section-desc">نه برای اینکه سریع آشتی کنیم؛ برای اینکه بدونی احساست برام مهمه.</p>
+<div class="letter-wrap"><article class="glass letter"><span class="seal">💌</span><p>
+تبسمِ من،<br><br>
+کاش می‌شد همین الان یه لحظه همه‌ی دلخوری‌ها رو بذاریم کنار و من فقط فرصت داشته باشم حرف دلم رو بهت بگم. نه اینکه ناراحتیت رو نادیده بگیرم، نه اینکه بخوام با چندتا جمله همه‌چی رو درست‌شده فرض کنم.<br><br>
+اگه حرف یا رفتارم دلت رو شکسته، <strong>واقعاً متأسفم.</strong> شاید من نتونسته باشم درست نشون بدم چقدر برام مهمی، اما نمی‌خوام غرورم از آرامش تو مهم‌تر باشه.<br><br>
+تو برای من فقط خنده‌ها و روزهای خوب نیستی؛ تو کسی هستی که حتی وقتی بینمون دلخوریه، دلم می‌خواد راهی پیدا کنم که بهتر بفهممت. می‌خوام وقتی حرف می‌زنی، به‌جای آماده کردن جوابم، واقعاً گوش بدم.<br><br>
+از تو نمی‌خوام عجله کنی یا به خاطر این صفحه ناراحتیت رو قورت بدی. فقط خواستم بدونی که دوستت دارم، دلم برای حال خوبمون تنگ شده و حاضرم با عمل نشون بدم که حرف‌هام جدیه.
+<span class="signature">با قلبی که هنوز سمت توئه، ♥</span>
+</p></article></div>
+</section>
+
+<section class="reveal">
+<div class="section-tag">CHAPTER 02 · چیزهایی که می‌خوام بهتر انجام بدم</div>
+<h2 class="section-title">دوست داشتن، فقط گفتن نیست.</h2>
+<p class="section-desc">این‌ها قول‌های کوچیکن؛ همون چیزهایی که باید توی رفتارم معلوم بشن.</p>
+<div class="cards">
+<article class="glass mini"><div class="ico">🫧</div><h3>اول می‌فهممت</h3><p>قبل از اینکه از خودم دفاع کنم، به حرفت گوش می‌دم و سعی می‌کنم بفهمم چی اذیتت کرده.</p></article>
+<article class="glass mini"><div class="ico">🩷</div><h3>احساست رو کوچیک نمی‌کنم</h3><p>اگه چیزی ناراحتت کرده، برای من مهمه؛ حتی اگه خودم همون لحظه متوجهش نشده باشم.</p></article>
+<article class="glass mini"><div class="ico">🌱</div><h3>جبران رو نشون می‌دم</h3><p>نمی‌خوام فقط قول بدم. می‌خوام از اشتباهام یاد بگیرم و توی رفتارم تغییرش بدم.</p></article>
+</div>
+</section>
+
+<section class="reveal">
+<div class="section-tag">CHAPTER 03 · یه پاکت کوچولوی مخفی</div>
+<h2 class="section-title">یه چیزی برات قایم کردم…</h2>
+<p class="section-desc">روی پاکت بزن. قول می‌دم داخلش قبض برق نباشه.</p>
+<div class="glass memory-stage">
+<div class="envelope-area">
+<div class="envelope" id="envelope" role="button" tabindex="0" aria-label="باز کردن نامه" onclick="openEnvelope()">
+<div class="env-body"></div><div class="env-letter">♡</div><div class="env-flap"></div>
+</div>
+<div class="tap-note">برای باز کردن پاکت لمسش کن</div>
+</div>
+<span class="big-heart">♡</span>
+<p>اگه قرار باشه یه چیز رو از نو بهتر انجام بدم،<br>از <b style="color:#ffadd1">شنیدنِ تو</b> شروع می‌کنم.</p>
+<p class="tiny">نه برای برنده شدن توی بحث؛ برای اینکه هیچ‌کدوممون احساس تنهایی نکنیم.</p>
+</div>
+</section>
+
+<section class="reveal">
+<div class="section-tag">CHAPTER 04 · یک مسیر کوچک رو به بهتر شدن</div>
+<h2 class="section-title">از اینجا به بعد…</h2>
+<p class="section-desc">قرار نیست همه‌چی یک‌شبه کامل بشه. فقط می‌خوام قدم‌هام واقعی باشن.</p>
+<div class="timeline">
+<div class="event"><h3>اول، حرف‌هات رو می‌شنوم</h3><p>بدون قطع کردن حرفت و بدون اینکه بخوام ناراحتیت رو توجیه کنم.</p></div>
+<div class="event"><h3>بعد، سهم خودم رو می‌پذیرم</h3><p>اگه اشتباه کردم، به‌جای بهونه آوردن مسئولیتش رو قبول می‌کنم.</p></div>
+<div class="event"><h3>و بعدش، باهم جلو می‌ریم</h3><p>اگه تو هم بخوای، راهی پیدا می‌کنیم که دفعه‌ی بعد بهتر از پس دلخوری‌هامون بربیایم.</p></div>
+</div>
+</section>
+
+<section class="reveal">
+<div class="section-tag">THE LAST PAGE · انتخاب با توئه</div>
+<div class="glass final-card">
+<div class="spark" style="font-size:2rem">✦　♡　✦</div>
+<h2>تبسم،<br>می‌تونیم دوباره آروم بشیم؟</h2>
+<p>لازم نیست همین الان جواب بدی. اگه هنوز ناراحتی، حق داری زمان بخوای. من فقط می‌خواستم بدونی که دلم می‌خواد درستش کنم، نه اینکه وانمود کنم چیزی نشده.</p>
+<div class="choice-row">
+<button class="btn main-btn" onclick="answer('talk')">بیا آروم حرف بزنیم ♡</button>
+<button class="btn line-btn" onclick="answer('time')">هنوز زمان می‌خوام 🌷</button>
+</div>
+<div class="answer" id="answer" aria-live="polite"></div>
+</div>
+</section>
+
+<footer class="footer">
+ساخته شده با کلی فکر و یک عالمه <span>♥</span><br>
+برای تبسم، از طرف کسی که می‌خواد بهتر دوستت داشته باشه.<br>
+<span style="opacity:.7">یک سایت قشنگ می‌تونه شروع حرف باشه؛ جبران واقعی با رفتار اتفاق می‌افته.</span>
+</footer>
+</main>
+
+<div id="noteModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+<div class="glass modal-card">
+<div style="font-size:2.5rem">💌</div>
+<h3 id="modalTitle">یه راز کوچیک برای تبسم</h3>
+<p>بین تمام حرف‌هایی که می‌شه زد، این یکی از همه مهم‌تره:<br><strong style="color:#ffacd0">من نمی‌خوام فقط آشتی کنیم؛ می‌خوام بهتر از قبل همدیگه رو بفهمیم.</strong><br><br>هر وقت آماده بودی، من با آرامش گوش می‌دم. ♡</p>
+<button class="btn main-btn close" onclick="closeEnvelope()">این حرف توی دلم می‌مونه ♡</button>
+</div>
+</div>
+<div id="toast" role="status"></div>
+
+<script>
+const typed=document.getElementById('typed');
+const line='یه صفحه برای لبخندت ساختم… اما بیشتر از هر افکتی، دلم می‌خواد دوباره دلیل لبخندت باشم.';
+let ti=0;
+function typeLine(){if(ti<=line.length){typed.textContent=line.slice(0,ti++);setTimeout(typeLine,34)}}
+setTimeout(typeLine,600);
+
+function goTo(id){document.getElementById(id).scrollIntoView({behavior:'smooth'})}
+
+const canvas=document.getElementById('stars'),ctx=canvas.getContext('2d');
+let stars=[];
+function resize(){
+canvas.width=innerWidth*devicePixelRatio;
+canvas.height=innerHeight*devicePixelRatio;
+canvas.style.width=innerWidth+'px';
+canvas.style.height=innerHeight+'px';
+ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);
+stars=Array.from({length:Math.min(150,Math.floor(innerWidth/7))},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*1.5+.2,a:Math.random(),s:Math.random()*.012+.002}))
+}
+function draw(){
+ctx.clearRect(0,0,innerWidth,innerHeight);
+for(const s of stars){
+s.a+=s.s;
+if(s.a>1||s.a<.15)s.s*=-1;
+ctx.beginPath();
+ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+ctx.fillStyle=`rgba(255,225,245,${Math.max(.1,s.a)})`;
+ctx.fill()
+}
+requestAnimationFrame(draw)
+}
+addEventListener('resize',resize);
+resize();
+draw();
+
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.13});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+let lastHeart=0;
+function burstHearts(n=15){
+const icons=['♡','♥','✦','✨','💗'];
+for(let i=0;i<n;i++){
+setTimeout(()=>{
+const el=document.createElement('span');
+el.className='heart-float';
+el.textContent=icons[Math.floor(Math.random()*icons.length)];
+el.style.left=(Math.random()*94+3)+'vw';
+el.style.setProperty('--dur',(3.5+Math.random()*3)+'s');
+el.style.setProperty('--size',(14+Math.random()*26)+'px');
+el.style.setProperty('--rot',(Math.random()*90-45)+'deg');
+el.style.color=['#ff8cbe','#ffc5e0','#c6b4ff','#ffe0a8'][Math.floor(Math.random()*4)];
+document.body.appendChild(el);
+setTimeout(()=>el.remove(),7000)
+},i*45)
+}
+}
+
+let toastTimer;
+function toast(msg){
+const t=document.getElementById('toast');
+t.textContent=msg;
+t.classList.add('show');
+clearTimeout(toastTimer);
+toastTimer=setTimeout(()=>t.classList.remove('show'),3000)
+}
+
+document.getElementById('sparkleBtn').addEventListener('click',()=>{burstHearts(24);toast('یه عالمه قلب، فقط برای تبسم ✨')});
+
+document.addEventListener('pointerdown',e=>{
+if(Date.now()-lastHeart<110)return;
+lastHeart=Date.now();
+const el=document.createElement('span');
+el.textContent=['✦','♡','·'][Math.floor(Math.random()*3)];
+el.style.cssText=`position:fixed;left:${e.clientX}px;top:${e.clientY}px;color:#ff9dca;pointer-events:none;z-index:50;font-size:${12+Math.random()*14}px;animation:fadeUp .7s reverse forwards`;
+document.body.appendChild(el);
+setTimeout(()=>el.remove(),750)
+});
+
+function openEnvelope(){
+document.getElementById('envelope').classList.add('open');
+setTimeout(()=>document.getElementById('noteModal').classList.add('show'),350);
+burstHearts(16)
+}
+function closeEnvelope(){document.getElementById('noteModal').classList.remove('show')}
+
+document.getElementById('envelope').addEventListener('keydown',e=>{
+if(e.key==='Enter'||e.key===' '){e.preventDefault();openEnvelope()}
+});
+document.getElementById('noteModal').addEventListener('click',e=>{
+if(e.target.id==='noteModal')closeEnvelope()
+});
+
+function answer(which){
+const a=document.getElementById('answer');
+if(which==='time'){
+a.textContent='باشه تبسم جان. به زمانت احترام می‌ذارم. هر وقت آماده بودی، بدون عجله و با آرامش گوش می‌دم. 🌷'
+}else{
+a.textContent='ممنون که فرصت حرف زدن می‌دی. این بار اول گوش می‌دم، بعد حرف می‌زنم. دوستت دارم، تبسم جان. ❤️';
+burstHearts(22)
+}
+}
+</script>
+</body>
+</html>
