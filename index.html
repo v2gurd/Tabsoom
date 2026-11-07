@@ -1,13 +1,205 @@
-<!doctype html>
-<html lang="fa" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#080910" />
-    <title>Sos-love</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<!DOCTYPE html><html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>مونوپولی ایرانی</title><link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#efe6d3;--fg:#2b2118;--c:#fffaf0;--bd:#9c8a6a;--ac:#0b7a5a;--ac2:#065f46;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#14161b;--fg:#f1ece0;--c:#23262e;--bd:#5b5f6b;--ac:#2fbf8f;--ac2:#1c8f69}}
+:root[data-theme=dark]{--bg:#14161b;--fg:#f1ece0;--c:#23262e;--bd:#5b5f6b;--ac:#2fbf8f;--ac2:#1c8f69}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(circle at 15% 0,#fff1cc55,transparent 45%),var(--bg);color:var(--fg);font:14px/1.6 Vazirmatn,Tahoma,sans-serif;padding:8px}
+.top{display:flex;justify-content:space-between;align-items:center;max-width:640px;margin:0 auto}
+.logo{font-weight:900;font-size:18px;color:var(--ac)}.code{background:var(--c);border:2px dashed #b8860b;border-radius:10px;padding:1px 10px}
+.pcs{max-width:640px;margin:4px auto;display:flex;flex-wrap:wrap}
+.pc{display:flex;align-items:center;gap:6px;background:var(--c);border:2px solid;border-radius:14px;padding:3px 9px 3px 12px;margin:3px;box-shadow:0 2px 6px #0002;font-size:12px;line-height:1.3}
+.pc.on{box-shadow:0 0 0 3px #fbbf24,0 4px 14px #0005}.av{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:900;border:2px solid #fff;box-shadow:0 1px 4px #0006}.cash{font-weight:900;color:var(--ac);font-size:13px}
+#bd{direction:ltr;display:grid;grid-template:repeat(11,1fr)/repeat(11,1fr);gap:1px;background:#7a5c1e;width:100%;max-width:640px;margin:8px auto;aspect-ratio:1;border:4px solid #7a5c1e;border-radius:14px;box-shadow:0 12px 30px #0005,inset 0 0 0 1px #fff3;overflow:hidden}
+.q{background:#fffaf0;color:#2b2118;overflow:hidden;line-height:1.15;text-align:center;display:flex;flex-direction:column;justify-content:space-between;direction:rtl;cursor:pointer;position:relative}
+.cor{background:linear-gradient(135deg,#ffe9a8,#f2c14e)}.tc{background:#dbeafe}.th{background:#ffe3cf}.tt{background:#fde2e2}.tr{background:#ece9ff}.tu{background:#dcfce7}.tp{background:#e3f6dc}.tJ{background:#fecaca}
+.cb{height:27%;min-height:5px;display:flex;justify-content:center;align-items:center;box-shadow:inset 0 -1px #0003}.ow{width:9px;height:9px;border-radius:50%;border:2px solid #fff;display:block;box-shadow:0 0 2px #000}
+.ic{font-size:clamp(10px,3.8vw,22px);line-height:1;margin-top:2px}.nm{font-weight:700;font-size:clamp(6px,1.95vw,10.5px);padding:0 1px}.pr{font-size:clamp(5px,1.6vw,9px);opacity:.7}
+.hs{display:flex;justify-content:center;gap:1px}.hs u{width:5px;height:5px;background:#16a34a;border-radius:1px;display:block;box-shadow:0 0 0 1px #064}.hs u.ht{width:13px;background:#dc2626;box-shadow:0 0 0 1px #700}
+.ow2{height:4px;display:block;border-radius:2px;margin:0 2px}.mg{font-size:6px;background:#555;color:#fff;border-radius:3px;margin:0 2px}
+.tk{display:flex;flex-wrap:wrap;justify-content:center;gap:1px;min-height:4px}.tk i{width:min(3.7vw,16px);height:min(3.7vw,16px);border-radius:50%;border:2px solid #fff;box-shadow:0 1px 4px #000a;display:block}.tk i.cu{animation:pl .8s infinite alternate}
+@keyframes pl{to{transform:scale(1.4)}}.q[data-s]{outline:3px solid #e11d48;outline-offset:-3px;z-index:3}
+#mid{grid-area:2/2/11/11;background:radial-gradient(circle at 50% 35%,#fff7e0,#ecdcb4);background-image:repeating-linear-gradient(45deg,#0000000d 0 6px,transparent 6px 12px),radial-gradient(circle at 50% 35%,#fff7e0,#ecdcb4);color:#2b2118;direction:rtl;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:4px;overflow:hidden}
+.ttl{font-weight:900;font-size:clamp(14px,5.2vw,30px);color:#0b5f48;text-shadow:0 2px 0 #fff;line-height:1.2}.ttl span{color:#b8860b}
+.dr{display:flex;gap:10px;margin:6px}.d{width:clamp(30px,10vw,54px);aspect-ratio:1;background:#fff;border-radius:22%;box-shadow:0 3px 0 #bbb,0 6px 10px #0005;display:grid;grid-template:repeat(3,1fr)/repeat(3,1fr);padding:14%}
+.d i{display:block;background:#1b1b1b;border-radius:50%;align-self:center;justify-self:center;width:75%;aspect-ratio:1}.roll .d{animation:rl .6s}.roll .d+.d{animation-delay:.08s}
+@keyframes rl{0%{transform:rotate(0) translateY(-30px)}60%{transform:rotate(340deg) translateY(6px)}100%{transform:rotate(360deg)}}
+.card{background:#fff;border:2px dashed #b8860b;border-radius:8px;padding:3px 7px;margin:2px;font-size:clamp(8px,2.4vw,12px);max-width:92%;font-weight:700}.lg{font-size:clamp(7px,2.2vw,11px);opacity:.75;max-height:28%;overflow:hidden}
+.b{padding:10px 16px;margin:3px;border:0;border-radius:12px;background:linear-gradient(180deg,var(--ac),var(--ac2));color:#fff;font:inherit;font-weight:700;cursor:pointer;box-shadow:0 3px 0 #0004}.b:active{transform:translateY(2px);box-shadow:0 1px 0 #0004}.b:disabled{opacity:.35}
+.b.s{padding:3px 10px;font-size:12px;margin:2px;border-radius:9px}.b.r{background:linear-gradient(180deg,#e04848,#b32424)}.b.alt{background:linear-gradient(180deg,#d4a017,#a97c0a)}
+.box{max-width:640px;margin:8px auto;background:var(--c);border:1px solid var(--bd);border-radius:16px;padding:12px;box-shadow:0 3px 10px #0002}
+.act{position:sticky;bottom:6px;z-index:10;box-shadow:0 6px 24px #0006;font-size:15px}.act.mine{border:2px solid var(--ac);animation:glow 1.4s infinite alternate}@keyframes glow{to{box-shadow:0 0 20px var(--ac)}}
+.deed{padding:0;overflow:hidden}.deed>div:not(.dh){padding:2px 12px}.dh{padding:6px 12px;color:#fff;font-weight:900;text-shadow:0 1px 2px #000a}
+input{padding:9px;border-radius:10px;border:1px solid var(--bd);font:inherit;background:var(--c);color:var(--fg);width:100%;margin:4px 0}
+.row{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--bd);padding:4px 0;font-size:13px}
+.hero{max-width:420px;margin:30px auto;text-align:center}.logo.big{font-size:34px;line-height:1.3;margin-bottom:14px;text-shadow:0 3px 0 #fff8}.st{margin:10px 0 2px;text-align:right}.st b{background:var(--ac);color:#fff;border-radius:50%;padding:0 8px;margin-left:6px}.hint{font-size:12px;opacity:.7}.bigcode{font-size:28px;letter-spacing:4px;color:#b8860b}
+#toast{position:fixed;top:12px;left:50%;transform:translateX(-50%);background:#222;color:#fff;padding:8px 16px;border-radius:12px;z-index:99;opacity:0;transition:opacity .3s;pointer-events:none;max-width:90%}
+</style>
+<style>
+:root:root:root{--bg:#0d2a23;--fg:#f6ecd2;--c:#17372e;--bd:#c9a44c;--ac:#34d399;--ac2:#0f9d6e}
+body{background:radial-gradient(ellipse at 50% -10%,#1f7a5d,#0c2f27 55%,#06150f) fixed;color:var(--fg);padding:10px}
+.logo{background:linear-gradient(180deg,#ffe9a0,#d9a21b);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none;filter:drop-shadow(0 2px 0 #0007)}
+.code{background:#0004;border:2px dashed #d9a93b;color:#ffe9a0}
+.pc{background:linear-gradient(180deg,#1f4a3d,#143228);color:var(--fg);box-shadow:0 4px 10px #0006;padding:5px 12px 5px 14px;font-size:13px}
+.pc.on{box-shadow:0 0 0 3px #fbbf24,0 0 22px #fbbf2466}.cash{color:#ffe08a;font-size:15px}.cash small,.pc small{font-size:10px;opacity:.75;font-weight:400}
+.av,.tk i{position:relative}.av::after,.tk i::after{content:"";position:absolute;left:18%;top:12%;width:38%;height:30%;border-radius:50%;background:#fff9;filter:blur(1px)}
+.av{box-shadow:0 3px 6px #0008,inset 0 -4px 6px #0004}
+#bd{background:#e0b64e;border:10px solid #4a2c0c;box-shadow:0 0 0 3px #d9a93b,0 28px 50px #000b,inset 0 0 20px #0008;border-radius:18px;gap:2px}
+.q{background:linear-gradient(160deg,#fffdf6,#efe2c0);box-shadow:inset 0 0 0 1px #0001,inset 0 2px 3px #fff}
+.q:active{filter:brightness(.93)}.cor{background:linear-gradient(135deg,#fff0b8,#e9b53a)}
+.cb{box-shadow:inset 0 -3px 5px #0004,inset 0 2px 2px #fff7}
+.nm{font-size:clamp(7px,2.35vw,11.5px);font-weight:800;line-height:1.15}
+.pr{opacity:1;font-weight:900;font-size:clamp(7px,2.2vw,11px);color:#065f46;background:#0b7a5a1f;border-radius:6px;margin:0 3px 2px;padding:1px 0}
+.pr.tx{color:#b91c1c;background:#dc26261f}
+.tk i{box-shadow:0 3px 5px #000b,inset 0 -3px 4px #0005;width:min(4.2vw,18px);height:min(4.2vw,18px)}
+#mid{background:radial-gradient(circle at 50% 30%,#2a8f6f,#0f4a39 70%);box-shadow:inset 0 0 40px #0009}
+.ttl{background:linear-gradient(180deg,#fff2b8,#e0a413);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none;filter:drop-shadow(0 3px 2px #0009);font-size:clamp(16px,6vw,34px)}.ttl span{color:transparent}
+.d{background:linear-gradient(145deg,#fff,#d8d8d8);box-shadow:0 4px 0 #9a9a9a,0 10px 14px #0008}
+.card{background:#fff8e1;color:#3b2a08;border:2px solid #d9a93b;box-shadow:0 4px 10px #0006}.lg{color:#e9f7ef;opacity:.9}
+.b{padding:12px 18px;font-size:15px;color:#04251b;background:linear-gradient(180deg,#5eead4,#12a37a);box-shadow:0 4px 0 #0a5c45,0 8px 14px #0005}
+.b.r{color:#fff;background:linear-gradient(180deg,#f87171,#b91c1c);box-shadow:0 4px 0 #7f1d1d,0 8px 14px #0005}.b.alt{color:#2a1a00;background:linear-gradient(180deg,#fde68a,#d4a017);box-shadow:0 4px 0 #8a6508,0 8px 14px #0005}
+.b.s{padding:5px 11px;font-size:12px}
+.box{background:linear-gradient(180deg,#1b4136,#133027);box-shadow:0 8px 22px #0007;border-color:#c9a44c66}
+.tip{background:#fde68a;color:#3b2a08;border-radius:10px;padding:6px 10px;margin-bottom:8px;font-weight:700;font-size:13px}
+.row{flex-wrap:wrap;gap:4px;padding:6px 0}
+.hint{color:inherit}
+.deed .dbody{padding:8px 14px}.r2{display:flex;justify-content:space-between;border-bottom:1px dashed #ffffff30;padding:4px 0}.r2 b{color:#ffe08a}.lo{color:#fca5a5!important}
+.ov{position:fixed;inset:0;z-index:50;background:#000a;backdrop-filter:blur(4px);display:grid;place-items:center;padding:14px;animation:fi .2s}@keyframes fi{from{opacity:0}}
+.dlg{width:100%;max-width:360px;background:#fffaf0;color:#2b2118;border-radius:18px;overflow:hidden;box-shadow:0 20px 60px #000;text-align:center;padding-bottom:14px;animation:up .25s}@keyframes up{from{transform:translateY(30px) scale(.96)}}
+.dlg .dh{font-size:20px;padding:12px}.dlg .r2{margin:0 16px;border-color:#0002}.dlg .r2 b{color:#065f46}
+.pb{font-size:44px;font-weight:900;color:#0b5f48;line-height:1.3;margin-top:6px}.pb small{font-size:14px;font-weight:700}
+.ask{font-size:20px;font-weight:900;margin:12px 0 4px}.dlg .hint{margin:6px 16px;opacity:.75}
+.guide,.sbx{text-align:right;margin-top:12px;font-size:13px}.guide summary,.sbx summary{cursor:pointer;font-weight:800}
+.guide li{margin:4px 0}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style></head><body><div id="app"></div>
+<script>
+const B=[["شروع ⬅","g"],["زاهدان","s",60,0],["صندوق جامعه","c"],["ایلام","s",60,0],["مالیات درآمد","t",200],["راه‌آهن جنوب","r",200],["یاسوج","s",100,1],["شانس","h"],["خرم‌آباد","s",100,1],["بوشهر","s",120,1],["زندان 🔒","j"],["اراک","s",140,2],["شرکت برق","u",150],["همدان","s",140,2],["کرمانشاه","s",160,2],["راه‌آهن شمال","r",200],["قزوین","s",180,3],["صندوق جامعه","c"],["ساری","s",180,3],["اهواز","s",200,3],["پارکینگ آزاد","p"],["کرمان","s",220,4],["شانس","h"],["یزد","s",220,4],["قم","s",240,4],["راه‌آهن شرق","r",200],["تبریز","s",260,5],["اصفهان","s",260,5],["شرکت آب","u",150],["شیراز","s",280,5],["برو زندان","J"],["مشهد","s",300,6],["رامسر","s",300,6],["صندوق جامعه","c"],["کیش","s",320,6],["راه‌آهن غرب","r",200],["شانس","h"],["تهران ولیعصر","s",350,7],["مالیات لوکس","t",100],["تهران زعفرانیه","s",400,7]];
+const RS="2,10,30,90,160,250|4,20,60,180,320,450|6,30,90,270,400,550|6,30,90,270,400,550|8,40,100,300,450,600|10,50,150,450,625,750|10,50,150,450,625,750|12,60,180,500,700,900|14,70,200,550,750,950|14,70,200,550,750,950|16,80,220,600,800,1000|18,90,250,700,875,1050|18,90,250,700,875,1050|20,100,300,750,925,1100|22,110,330,800,975,1150|22,110,330,800,975,1150|24,120,360,850,1025,1200|26,130,390,900,1100,1275|26,130,390,900,1100,1275|28,150,450,1000,1200,1400|35,175,500,1100,1300,1500|50,200,600,1400,1700,2000".split("|").map(s=>s.split(",").map(Number));
+let ri=0;B.forEach(q=>{if(q[1]=='s')q.rent=RS[ri++]});
+const GC=["#8b5a2b","#7ec8e3","#e056a0","#f39c12","#e74c3c","#f1c40f","#27ae60","#2c3e8f"],PC=["#e74c3c","#3498db","#2ecc71","#f1c40f","#9b59b6","#e67e22","#e84393","#16a085"],GJ=[4,7];
+const IC={g:'🏁',j:'🔒',r:"🚂",u:"💡",t:"💸",c:"📦",h:"❓",p:"🅿️",J:"👮"};
+const $=id=>document.getElementById(id),f=n=>Math.round(n).toLocaleString('fa-IR'),rnd=n=>Math.floor(Math.random()*n);
+const sh=n=>{const a=[...Array(n).keys()];for(let i=n-1;i>0;i--){const j=rnd(i+1);[a[i],a[j]]=[a[j],a[i]]}return a};
+const ID=(()=>{try{let v=localStorage.getItem('mid');if(!v){v=Math.random().toString(36).slice(2);localStorage.setItem('mid',v)}return v}catch(e){return Math.random().toString(36).slice(2)}})();
+let S=null,ref=null,db=null,local=false,code='',LOC=null,SEL=-1;
+const cur=()=>S.p[S.t],lg=t=>{S.log.unshift(t);S.log.length=Math.min(S.log.length,6)},add=(i,a)=>{S.p[i].cash+=a};
+const grp=g=>B.map((q,i)=>q[3]===g&&q[1]=='s'?i:-1).filter(i=>i>=0);
+const mono=(o,g)=>grp(g).every(i=>S.pr[i]&&S.pr[i].o===o);
+const cnt=(o,t)=>B.filter((q,i)=>q[1]==t&&S.pr[i]&&S.pr[i].o===o).length;
+const hc=g=>50*(1+(g>>1));
+function rent(i){const q=B[i],o=S.pr[i];if(!o||o.m)return 0;if(q[1]=='s')return o.h?q.rent[o.h]:q.rent[0]*(mono(o.o,q[3])?2:1);if(q[1]=='r')return 25<<(cnt(o.o,'r')-1);return(S.d[0]+S.d[1])*(cnt(o.o,'u')==2?10:4)}
+function pay(i,a,to){const p=S.p[i];if(p.cash>=a){p.cash-=a;if(to>=0)S.p[to].cash+=a;return true}S.debt={i,a,to};S.ph='debt';lg(p.n+': '+f(a)+' بدهی دارد؛ باید ملک رهن کند یا ساختمان بفروشد');return false}
+function each(a){const o=S.p.map((p,i)=>i).filter(i=>i!=S.t&&!S.p[i].b);if(a>0)o.forEach(i=>{const m=Math.min(a,S.p[i].cash);S.p[i].cash-=m;add(S.t,m)});else{if(pay(S.t,-a*o.length,-1))o.forEach(i=>add(i,-a))}}
+function rep(a,b){let s=0;for(const i in S.pr){const r=S.pr[i];if(r.o==S.t)s+=r.h==5?b:r.h*a}pay(S.t,s,-1)}
+function mv(to){const p=cur();if(to<p.pos){add(S.t,200);lg('عبور از شروع: ۲۰۰+')}p.pos=to;land()}
+function near(t){const p=cur(),L=t=='r'?[5,15,25,35]:[12,28];let i=L.find(x=>x>p.pos);if(i===undefined){i=L[0];add(S.t,200)}p.pos=i;const o=S.pr[i];S.ph='after';if(!o){S.ph='buy';return}if(o.o!=S.t&&!o.m){let r;if(t=='r')r=rent(i)*2;else{S.d=[1+rnd(6),1+rnd(6)];r=(S.d[0]+S.d[1])*10}lg('اجاره '+f(r));pay(S.t,r,o.o)}}
+const CH=[["برو به شروع",()=>mv(0)],["برو به قم",()=>mv(24)],["برو به اراک",()=>mv(11)],["نزدیک‌ترین شرکت خدماتی: اگر صاحب دارد ۱۰ برابر تاس بده",()=>near('u')],["نزدیک‌ترین راه‌آهن: دو برابر اجاره",()=>near('r')],["نزدیک‌ترین راه‌آهن: دو برابر اجاره",()=>near('r')],["سود بانک: ۵۰+",()=>add(S.t,50)],["کارت آزادی از زندان",'J'],["۳ خانه عقب برو",()=>{const p=cur();p.pos=(p.pos+37)%40;land()}],["برو زندان",()=>jail()],["تعمیرات: خانه ۲۵، هتل ۱۰۰",()=>rep(25,100)],["جریمه ۱۵",()=>pay(S.t,15,-1)],["برو راه‌آهن جنوب",()=>mv(5)],["برو تهران زعفرانیه",()=>mv(39)],["به هر بازیکن ۵۰ بده",()=>each(-50)],["وام ساختمانی: ۱۵۰+",()=>add(S.t,150)]];
+const CC=[["برو به شروع",()=>mv(0)],["اشتباه بانک به نفع تو: ۲۰۰+",()=>add(S.t,200)],["هزینه دکتر: ۵۰",()=>pay(S.t,50,-1)],["فروش سهام: ۵۰+",()=>add(S.t,50)],["کارت آزادی از زندان",'J'],["برو زندان",()=>jail()],["صندوق تعطیلات: ۱۰۰+",()=>add(S.t,100)],["بازگشت مالیات: ۲۰+",()=>add(S.t,20)],["تولدت است: از هر بازیکن ۱۰ بگیر",()=>each(10)],["بیمه عمر: ۱۰۰+",()=>add(S.t,100)],["هزینه بیمارستان: ۱۰۰",()=>pay(S.t,100,-1)],["شهریه مدرسه: ۵۰",()=>pay(S.t,50,-1)],["حق مشاوره: ۲۵+",()=>add(S.t,25)],["تعمیر خیابان: خانه ۴۰، هتل ۱۱۵",()=>rep(40,115)],["مسابقه زیبایی: ۱۰+",()=>add(S.t,10)],["ارث: ۱۰۰+",()=>add(S.t,100)]];
+function draw(k){const d=k?S.ch:S.cc,x=d.shift(),c=(k?CH:CC)[x];S.cd=(k?'شانس: ':'صندوق جامعه: ')+c[0];lg(cur().n+' — '+S.cd);if(c[1]=='J'){cur().gj[k]++;return}d.push(x);c[1]()}
+function jail(){const p=cur();p.pos=10;p.jl=1;p.jt=0;S.ag=false;S.dc=0;S.ph='after';lg(p.n+' به زندان رفت')}
+function land(){const p=cur(),i=p.pos,q=B[i],t=q[1];S.ph='after';if('sru'.includes(t)){const o=S.pr[i];if(!o)S.ph='buy';else if(o.o!=S.t&&!o.m){const r=rent(i);lg(p.n+' اجاره '+f(r)+' به '+S.p[o.o].n);pay(S.t,r,o.o)}}else if(t=='t')pay(S.t,q[2],-1);else if(t=='c')draw(0);else if(t=='h')draw(1);else if(t=='J')jail()}
+function move(n){const p=cur(),np=(p.pos+n)%40;if(np<p.pos){add(S.t,200);lg(p.n+' از شروع گذشت: ۲۰۰+')}p.pos=np;land()}
+function roll(){const p=cur(),a=1+rnd(6),b=1+rnd(6),dbl=a==b;S.d=[a,b];S.cd='';
+ if(p.jl){if(dbl){p.jl=0;S.dc=0;S.ag=false;lg(p.n+' با جفت از زندان آزاد شد');move(a+b)}else{p.jt++;if(p.jt>=3){p.jl=0;S.ag=false;lg(p.n+' ۳ نوبت ماند؛ ۵۰ جریمه');move(a+b);if(S.ph!='debt')pay(S.t,50,-1)}else{S.ph='after';S.ag=false;lg(p.n+' جفت نیاورد؛ در زندان ماند')}}return}
+ if(dbl){S.dc++;if(S.dc==3){lg(p.n+' سه جفت پشت‌سرهم: زندان!');jail();return}}else S.dc=0;S.ag=dbl;move(a+b)}
+function nxt(){S.pt=0;S.tr=null;const al=S.p.filter(p=>!p.b);if(al.length==1){S.ph='over';S.w=S.p.indexOf(al[0]);return}do S.t=(S.t+1)%S.p.length;while(S.p[S.t].b);S.ph='roll';S.dc=0;S.ag=false;S.debt=null;S.cd=''}
+function auc(){const q=[];for(let k=0;k<S.p.length;k++){const j=(S.t+k)%S.p.length;if(!S.p[j].b)q.push(j)}S.au={i:cur().pos,b:0,h:-1,q,c:0};S.ph='auction';lg('مزایده '+B[cur().pos][0])}
+function adv(){const a=S.au,n=a.q.length;for(let k=1;k<=n;k++){const j=(a.c+k)%n;if(a.q[j]!=a.h){a.c=j;return}}}
+function aend(){const a=S.au;if(a.h>=0){S.p[a.h].cash-=a.b;S.pr[a.i]={o:a.h,h:0,m:0};lg(S.p[a.h].n+' مزایده را با '+f(a.b)+' برد')}else lg('کسی نخرید');S.au=null;S.ph='after'}
+function apass(){const a=S.au;a.q.splice(a.c,1);if(a.c>=a.q.length)a.c=0;if(!a.q.length||(a.q.length==1&&a.h==a.q[0]))return aend();if(a.q[a.c]==a.h)adv()}
+function houses(){let h=0,t=0;for(const i in S.pr){const r=S.pr[i];if(r.h==5)t++;else h+=r.h}return[h,t]}
+function build(i){const q=B[i],r=S.pr[i],g=grp(q[3]),p=cur();if(!mono(S.t,q[3])||g.some(j=>S.pr[j].m)||r.h>=5||g.some(j=>S.pr[j].h<r.h)||p.cash<hc(q[3]))return;const[h,t]=houses();if(r.h==4?t>=12:h>=32){lg('ساختمان بانک تمام شده');return}p.cash-=hc(q[3]);r.h++}
+function sell(i){const q=B[i],r=S.pr[i],g=grp(q[3]);if(!r.h||g.some(j=>S.pr[j].h>r.h))return;if(r.h==5&&houses()[0]>28){lg('خانه کافی در بانک نیست');return}r.h--;cur().cash+=hc(q[3])/2}
+function mtg(i){const q=B[i],r=S.pr[i],p=cur();if(r.m){const c=Math.ceil(q[2]*.55);if(p.cash>=c){p.cash-=c;r.m=0}}else if(q[1]!='s'||grp(q[3]).every(j=>!S.pr[j]||!S.pr[j].h)){r.m=1;p.cash+=q[2]/2}}
+function bust(){const p=cur(),d=S.debt;for(const i in S.pr){const r=S.pr[i];if(r.o==S.t){if(d&&d.to>=0){r.o=d.to;r.h=0}else delete S.pr[i]}}if(d&&d.to>=0)S.p[d.to].cash+=Math.max(p.cash,0);p.cash=0;p.b=1;for(let k=0;k<2;k++)for(;p.gj[k]>0;p.gj[k]--)(k?S.ch:S.cc).push(GJ[k]);lg(p.n+' ورشکست شد');S.debt=null;nxt()}
+const ACT={start(){S.ph='roll';S.t=rnd(S.p.length)},roll,buy(){const p=cur(),i=p.pos;if(pay(S.t,B[i][2],-1)){S.pr[i]={o:S.t,h:0,m:0};lg(p.n+' '+B[i][0]+' را خرید');S.ph='after'}},auc,bid(x){const a=S.au;a.b+=x;a.h=a.q[a.c];adv()},ap:apass,
+ pd(){const d=S.debt,p=S.p[d.i];if(p.cash>=d.a){p.cash-=d.a;if(d.to>=0)S.p[d.to].cash+=d.a;S.debt=null;S.ph='after'}},bust,again(){S.ph='roll'},end:nxt,
+ pj(){const p=cur();if(p.cash>=50){p.cash-=50;p.jl=0;lg(p.n+' ۵۰ داد و آزاد شد')}},gj(){const p=cur(),k=p.gj[0]?0:1;p.gj[k]--;(k?S.ch:S.cc).push(GJ[k]);p.jl=0;lg(p.n+' با کارت آزاد شد')},tacc(){const t=S.tr;S.tr=null;if(vTr(t)){lg('معامله معتبر نیست');return}const F=S.p[t.from],T=S.p[t.to];F.cash+=t.gt-t.gf-ci(t.pt);T.cash+=t.gf-t.gt-ci(t.pf);t.pf.forEach(i=>S.pr[i].o=t.to);t.pt.forEach(i=>S.pr[i].o=t.from);lg('معامله بین '+F.n+' و '+T.n+' انجام شد')},tdec(){lg(S.p[S.tr.to].n+' معامله را رد کرد');S.tr=null},tcan(){S.tr=null},bld:build,sel:sell,mtg,fin(){const w=S.p.map((p,k)=>p.b?-1:p.cash+Object.keys(S.pr).filter(i=>S.pr[i].o==k).reduce((t,i)=>t+(S.pr[i].m?B[i][2]/2:B[i][2])+S.pr[i].h*(B[i][1]=='s'?hc(B[i][3]):0),0));S.w=w.indexOf(Math.max(...w));S.ph='over'},addb(){if(S.p.length<8){S.p.push(np('ربات '+(S.p.filter(p=>p.bot).length+1),'B'+S.p.length));S.p[S.p.length-1].bot=1}}};
+function A(k,x){if(!S||!ACT[k])return;ACT[k](x);save()}
+
+const botV=(i,a)=>{const q=B[i];let v=q[2];if(q[1]=='s'){const g=grp(q[3]);if(g.filter(j=>S.pr[j]&&S.pr[j].o===a).length>=g.length-1)v*=1.4}return v};
+function botBuild(a){const p=S.p[a];for(let i=0;i<40;i++){const q=B[i],r=S.pr[i];if(q[1]!='s'||!r||r.o!==a||!mono(a,q[3]))continue;const g=grp(q[3]);if(g.some(j=>S.pr[j].m)||r.h>=5||g.some(j=>S.pr[j].h<r.h)||p.cash-hc(q[3])<100)continue;const[h,t]=houses();if(r.h==4?t>=12:h>=32)continue;return i}}
+function botAct(){if(!S||S.ph=='lobby'||S.ph=='over')return false;if(S.tr){if(S.p[S.tr.to].bot){A(botResp(S.tr)?'tacc':'tdec');return true}return false}const a=S.ph=='auction'?S.au.q[S.au.c]:S.t,p=S.p[a];if(!p.bot)return false;const ph=S.ph,mine=Object.keys(S.pr).map(Number).filter(i=>S.pr[i].o==a);
+ if(ph=='roll'){if(p.jl&&(p.gj[0]+p.gj[1]))A('gj');else if(p.jl&&p.cash>400)A('pj');else A('roll');return true}
+ if(ph=='buy'){A(p.cash-B[p.pos][2]>=60?'buy':'auc');return true}
+ if(ph=='auction'){const u=S.au,lim=Math.min(botV(u.i,a)*1.3,p.cash-60);if(u.b+10<=lim)A('bid',lim-u.b>=60?50:10);else A('ap');return true}
+ if(ph=='debt'){const d=S.debt;if(p.cash>=d.a){A('pd');return true}
+  const sh=mine.find(i=>S.pr[i].h&&grp(B[i][3]).every(j=>S.pr[j].h<=S.pr[i].h)&&!(S.pr[i].h==5&&houses()[0]>28));if(sh!==undefined){A('sel',sh);return true}
+  const m=mine.find(i=>!S.pr[i].m&&(B[i][1]!='s'||grp(B[i][3]).every(j=>!S.pr[j]||!S.pr[j].h)));if(m!==undefined){A('mtg',m);return true}A('bust');return true}
+ if(!S.pt){S.pt=1;const t=botTrade(a);if(t){S.tr=t;lg(p.n+' پیشنهاد معامله به '+S.p[t.to].n+' داد');save();return true}}
+ const b=botBuild(a);if(b!==undefined){A('bld',b);return true}
+ const um=mine.find(i=>S.pr[i].m&&p.cash>=B[i][2]*.55+250);if(um!==undefined){A('mtg',um);return true}
+ A(S.ag?'again':'end');return true}
+let tmr=0;function botStep(){clearTimeout(tmr);if(!S||S.ph=='lobby'||S.ph=='over')return;const a=S.tr?S.tr.to:S.ph=='auction'?S.au.q[S.au.c]:S.t;if(!S.p[a].bot)return;if(!(local||S.p.find(p=>!p.bot).id==ID))return;tmr=setTimeout(botAct,900)}
+
+const SBU='https://yhjwttinwgsekgbmdijw.supabase.co',SBK='';
+const SB=(()=>{let u='',k='';try{u=localStorage.getItem('sbu')||'';k=localStorage.getItem('sbk')||''}catch(e){}return{url:(u||SBU).replace(/\/+$/,''),key:k||SBK}})();
+function saveSb(){try{localStorage.setItem('sbu',$('su').value.trim());localStorage.setItem('sbk',$('sk').value.trim())}catch(e){}location.reload()}
+let TB=null;
+const ci=L=>L.reduce((t,i)=>t+(S.pr[i].m?Math.ceil(B[i][2]*.05):0),0);
+const comp=(i,pl,add)=>B[i][1]=='s'&&grp(B[i][3]).every(j=>j==i||(S.pr[j]&&S.pr[j].o===pl)||add.includes(j));
+const tradable=i=>{const q=B[i];return q[1]!='s'||grp(q[3]).every(j=>!S.pr[j]||!S.pr[j].h)};
+function vTr(t){const F=S.p[t.from],T=S.p[t.to];if(!F||!T||F.b||T.b||t.from==t.to)return 'x';if(!(t.gf>=0&&t.gt>=0)||!(t.gf||t.gt||t.pf.length||t.pt.length))return 'x';
+ for(const i of t.pf)if(!S.pr[i]||S.pr[i].o!=t.from||!tradable(i))return 'x';for(const i of t.pt)if(!S.pr[i]||S.pr[i].o!=t.to||!tradable(i))return 'x';
+ if(F.cash<t.gf+ci(t.pt)||T.cash<t.gt+ci(t.pf))return 'x';return ''}
+function botResp(t){const a=t.to,f=t.from,vl=(i,pl,add)=>{const q=B[i];let v=q[2]*(S.pr[i].m?.5:1);if(comp(i,pl,add))v*=2.5;return v};let g=t.gf-t.gt;t.pf.forEach(i=>g+=vl(i,a,t.pf));t.pt.forEach(i=>g-=vl(i,a,[])+(comp(i,f,t.pt)?B[i][2]*2:0));return g>0&&!vTr(t)}
+function botTrade(a){const p=S.p[a];for(let g=0;g<8;g++){const G=grp(g),own=G.filter(i=>S.pr[i]&&S.pr[i].o===a);if(own.length!=G.length-1)continue;const i=G.find(j=>!S.pr[j]||S.pr[j].o!==a),r=S.pr[i];if(!r||S.p[r.o].b||!tradable(i))continue;const c=Math.min(Math.floor(p.cash-100),Math.ceil(B[i][2]*3.3));if(c<B[i][2]*1.5)continue;const t={from:a,to:r.o,gf:c,gt:0,pf:[],pt:[i]};if(!vTr(t))return t}}
+const lst=(c,L)=>[c?f(c)+' تومان':'',...L.map(i=>B[i][0])].filter(Boolean).join('، ')||'هیچ';
+function trc(mine){const t=S.tr;return`🤝 <b>${S.p[t.from].n}</b> به <b>${S.p[t.to].n}</b> پیشنهاد می‌دهد:<br>می‌دهد: ${lst(t.gf,t.pf)}<br>می‌گیرد: ${lst(t.gt,t.pt)}<br>`+(mine?bt('قبول','tacc')+bt('رد','tdec',0,0,'r'):'منتظر پاسخ…')+((local||S.p[t.from].id==ID)&&!S.p[t.from].bot?bt('لغو پیشنهاد','tcan',0,0,'s r'):'')}
+function tbOpen(){TB={to:-1,gf:0,gt:0,pf:[],pt:[]};render()}
+function tbTo(k){TB.to=k;TB.pt=[];render()}
+function tbP(sd,i){const L=TB[sd],x=L.indexOf(i);x<0?L.push(i):L.splice(x,1);render()}
+function tbSend(){const t={from:S.t,to:TB.to,gf:+$('tf').value||0,gt:+$('tg').value||0,pf:TB.pf,pt:TB.pt};if(vTr(t))return toast('پیشنهاد معتبر نیست (پول یا ملک کافی نیست یا چیزی انتخاب نشده)');S.tr=t;TB=null;lg(S.p[t.from].n+' پیشنهاد معامله داد');save()}
+function sbDoc(c){c=String(c).replace('games/','');const H={apikey:SB.key,Authorization:'Bearer '+SB.key,'Content-Type':'application/json'},u=SB.url+'/rest/v1/mono_games',g=async()=>{const r=await fetch(u+'?code=eq.'+c+'&select=s',{headers:H});if(!r.ok)throw new Error(r.status);return r.json()};
+ return{get:async()=>{const j=await g();return{exists:j.length>0,data:()=>j[0]}},set:async d=>{const r=await fetch(u,{method:'POST',headers:{...H,Prefer:'resolution=merge-duplicates'},body:JSON.stringify({code:c,s:d.s})});if(!r.ok)throw new Error(r.status)},
+ onSnapshot:cb=>{let last='';const t=setInterval(async()=>{try{const j=await g();if(j[0]&&j[0].s!==last){last=j[0].s;cb({exists:true,data:()=>j[0]})}}catch(e){}},1500);return()=>clearInterval(t)}}}
+function ns(){return{v:0,tr:null,pt:0,p:[],t:0,ph:'lobby',d:[1,1],dc:0,ag:false,pr:{},cc:sh(16),ch:sh(16),log:[],au:null,debt:null,cd:''}}
+const np=(n,id)=>({id:id||ID,n,cash:1500,pos:0,jl:0,jt:0,gj:[0,0],b:0});
+const shim=()=>({get:async()=>({exists:!!LOC,data:()=>LOC}),set:async d=>{LOC=d},onSnapshot:()=>()=>{}});
+async function init(){if(db||local)return;if(SB.url){db={doc:sbDoc};return}try{db=await claude.use('db')}catch(e){db=null}if(!db){local=true;toast('بازی آنلاین در دسترس نیست؛ حالت یک‌دستگاهی (نوبتی روی همین گوشی) فعال شد.')}}
+function save(){S.v=(S.v||0)+1;render();ref.set({s:JSON.stringify(S)}).catch(e=>console.error(e))}
+function sub(){try{location.hash=code}catch(e){}ref.onSnapshot(sn=>{if(sn.exists){const n=JSON.parse(sn.data().s);if(!S||(n.v||0)>=(S.v||0)){S=n;render()}}})}
+async function mk(){const n=$('n').value.trim();if(!n)return toast('اسمت را بنویس');await init();code=''+(1000+rnd(9000));ref=db?db.doc('games/'+code):shim();S=ns();S.p.push(np(n,local?'L0':0));save();sub()}
+async function jn(){const n=$('n').value.trim();code=$('c').value.trim();if(!n||!code)return toast('اسم و کد بازی را بنویس');await init();if(local)return toast('حالت آنلاین فعال نیست');ref=db.doc('games/'+code);const sn=await ref.get();if(!sn.exists)return toast('بازی پیدا نشد');S=JSON.parse(sn.data().s);if(S.ph=='lobby'&&!S.p.some(p=>p.id==ID)){if(S.p.length>=8)return toast('ظرفیت پر است');S.p.push(np(n));S.v=(S.v||0)+1;await ref.set({s:JSON.stringify(S)})}sub();render()}
+function addp(){const n=$('n').value.trim();if(n&&S.p.length<8){S.p.push(np(n,'L'+S.p.length));save()}}
+const P=i=>i<=10?[11,11-i]:i<=20?[11-(i-10),1]:i<=30?[1,1+(i-20)]:[1+(i-30),11];
+const bt=(l,k,x,d,c)=>`<button class="b ${c||''}" ${d?'disabled':''} onclick="A('${k}',${x||0})">${l}</button>`;
+
+const PIP={1:[5],2:[1,9],3:[1,5,9],4:[1,3,7,9],5:[1,3,5,7,9],6:[1,3,4,6,7,9]};
+const dv=n=>'<span class="d">'+PIP[n].map(c=>`<i style="grid-area:${Math.ceil(c/3)}/${(c-1)%3+1}"></i>`).join('')+'</span>';
+let LD='',FC=0;
+function toast(m){let t=$('toast');if(!t){t=document.createElement('div');t.id='toast';document.body.appendChild(t)}t.textContent=m;t.style.opacity=1;clearTimeout(t._h);t._h=setTimeout(()=>{t.style.opacity=0},3500)}
+
+function tip(){if(S.tr)return'🤝 پیشنهاد معامله آمده؛ اگر به نفعت است «قبول» را بزن';const p=S.p[S.ph=='auction'?S.au.q[S.au.c]:S.t];return({roll:p.jl?'🔒 در زندانی؛ جفت بیاور یا ۵۰ تومان بده':'🎲 تاس بریز تا مهره‌ات جلو برود',buy:'🏷️ این ملک صاحب ندارد؛ بخر یا بگذار مزایده شود',auction:'🔨 هر کس بیشتر بدهد ملک را می‌برد. نمی‌خواهی؟ «انصراف» را بزن',debt:'⚠️ پولت کم است: ملک رهن کن یا خانه بفروش، وگرنه ورشکست می‌شوی',after:'✅ کاری نداری؟ «پایان نوبت» را بزن. می‌توانی ساختمان بسازی یا معامله کنی'})[S.ph]||''}
+function info(i){SEL=i;render()}
+function render(){const app=$('app');if(TB&&$('tf')){TB.gf=+$('tf').value||0;TB.gt=+$('tg').value||0}
+ if(!S){app.innerHTML=`<div class="hero"><div class="logo big">🎲<br>مونوپولی ایرانی</div><div class="box"><p class="st"><b>۱</b>اسمت را بنویس</p><input id="n" placeholder="اسم تو"><p class="st"><b>۲</b>بازی جدید بساز، یا کد بازی دوستت را بزن</p><input id="c" placeholder="کد بازی (۴ رقم)" inputmode="numeric" value="${(location.hash||'').slice(1)}">${bt('✨ ساخت بازی جدید','mkk')}${bt('🔑 ورود با کد','jnn',0,0,'alt')}<p class="hint">تنها هستی؟ بعد از ساخت بازی، ربات اضافه کن 🤖</p><details class="guide" open><summary>📖 بازی چطور است؟</summary><ol><li>هر نفر ۱٬۵۰۰ تومان پول دارد.</li><li>تاس بریز و مهره را جلو ببر.</li><li>روی ملک بدون صاحب رسیدی؟ می‌توانی بخری.</li><li>هر کس روی ملک تو بیفتد، اجاره می‌دهد.</li><li>همه‌ی ملک‌های یک رنگ را جمع کن و ساختمان بساز تا اجاره بالا برود.</li><li>پول تمام شد؟ ملک رهن کن یا ورشکست می‌شوی. آخر بازی، ثروتمندترین برنده است.</li></ol></details><details class="sbx"><summary>☁️ ${SB.url?'آنلاین: Supabase وصل است':'اتصال به Supabase (برای بازی از چند گوشی)'}</summary><input id="su" placeholder="Project URL (https://xxxx.supabase.co)" value="${SB.url}" dir="ltr"><input id="sk" placeholder="Publishable key (sb_publishable_...)" value="${SB.key}" dir="ltr"><button class="b s" onclick="saveSb()">ذخیره و اتصال</button></details></div></div>`;return}
+ const mi=local?S.t:S.p.findIndex(p=>p.id==ID),over=S.ph=='over';
+ let h=`<div class="top"><div class="logo">🎲 مونوپولی ایرانی</div><div class="code">کد بازی <b>${code}</b> ${local?'(یک‌دستگاهی)':''}</div></div><div class="pcs">${S.p.map((p,k)=>`<div class="pc${S.ph!='lobby'&&k==S.t&&!over?' on':''}" style="border-color:${PC[k]};opacity:${p.b?.4:1}"><span class="av" style="background:${PC[k]}">${p.bot?'🤖':p.n[0]}</span><span>${p.n}${p.jl?' 🔒':''}${k==mi?' (تو)':''}<br><span class="cash">${S.ph=='lobby'?'':f(p.cash)+' <small>تومان</small>'}</span></span></div>`).join('')}</div>`;
+ if(S.ph=='lobby'){h+=`<div class="box"><b>در انتظار بازیکنان…</b> (۲ تا ۸ نفر)<br>کد بازی را به خانواده بده: <b class="bigcode">${code}</b><br>${local?'<input id="n" placeholder="اسم بازیکن"> '+bt('افزودن','addpp'):''}${(local||S.p[0].id==ID)?bt('🤖 افزودن ربات','addb',0,S.p.length>=8):''}${(local||S.p[0].id==ID)?bt('شروع بازی','start',0,S.p.length<2):'منتظر باش تا سازنده بازی را شروع کند'}</div>`;app.innerHTML=h;return}
+ h+='<div id="bd">';
+ B.forEach((q,i)=>{const[r,c]=P(i),o=S.pr[i],t=q[1],cor=[0,10,20,30].includes(i);h+=`<div class="q ${cor?'cor':''} t${t}" style="grid-area:${r}/${c}" onclick="info(${i})" ${SEL==i?'data-s=1':''}>${t=='s'?`<div class="cb" style="background:${GC[q[3]]}">${o?`<b class="ow" style="background:${PC[o.o]}"></b>`:''}</div>`:`<div class="ic">${IC[t]||''}</div>`}<div class="nm">${q[0].replace(/ ?[⬅🔒]/g,'')}</div>${t=='s'&&o&&o.h?`<div class="hs">${o.h==5?'<u class="ht"></u>':'<u></u>'.repeat(o.h)}</div>`:''}${o&&t!='s'?`<b class="ow2" style="background:${PC[o.o]}"></b>`:''}${o&&o.m?'<div class="mg">رهن</div>':''}<div class="tk">${S.p.map((p,k)=>p.pos==i&&!p.b?`<i class="${k==S.t?'cu':''}" style="background:${PC[k]}"></i>`:'').join('')}</div>${q[2]?`<div class="pr${t=='t'?' tx':''}">${t=='t'?'−':''}${f(q[2])}</div>`:''}</div>`});
+ const dk=S.d.join()+S.t+S.ph,rolled=dk!==LD&&LD!=='';LD=dk;h+=`<div id="mid"><div class="ttl">مونوپولی <span>ایرانی</span></div><div class="dr ${rolled?'roll':''}">${dv(S.d[0])}${dv(S.d[1])}</div>${S.cd?`<div class="card">${S.cd}</div>`:''}<div class="lg">${S.log.slice(0,3).map(x=>`<div>${x}</div>`).join('')}</div></div></div>`;
+ const a=S.tr?S.tr.to:S.ph=='auction'?S.au.q[S.au.c]:S.t,p=S.p[a],mine=!over&&!p.bot&&(local||p.id==ID);let c='';
+ if(over)c=`🏆 برنده: <b>${S.p[S.w].n}</b>`;
+ else if(S.tr)c=trc(mine);else{c=`نوبت <b style="color:${PC[a]}">${p.n}</b>: `;
+  if(!mine)c+='در حال بازی…';
+  else if(S.ph=='roll')c+=(p.jl?bt('پرداخت ۵۰ و آزادی','pj',0,p.cash<50)+(p.gj[0]+p.gj[1]?bt('کارت آزادی','gj'):''):'')+bt('🎲 تاس بریز','roll')+bt('🤝 معامله','trade');
+  else if(S.ph=='buy'){c+='👀 درباره‌ی خرید تصمیم بگیر…'}
+  else if(S.ph=='auction'){const u=S.au;c+=`مزایده ${B[u.i][0]} — بالاترین: ${f(u.b)}${u.h>=0?' ('+S.p[u.h].n+')':''}<br>`+[10,50,100].map(d=>bt('+'+f(d),'bid',d,p.cash<u.b+d)).join('')+bt('انصراف','ap',0,0,'r')}
+  else if(S.ph=='debt')c+=`بدهی ${f(S.debt.a)}<br>`+bt('پرداخت بدهی','pd',0,p.cash<S.debt.a)+bt('ورشکستگی','bust',0,0,'r');
+  else c+=(S.ag?bt('🎲 جفت آوردی! دوباره','again'):bt('پایان نوبت','end'))+bt('🤝 معامله','trade')}
+ h+=`<div class="box act${mine?' mine':''}">${mine&&!over?'<div class="tip">'+tip()+'</div>':''}${c}${!over&&(local||S.p.find(p=>!p.bot).id==ID)?'<div>'+bt('پایان بازی (برنده: ثروتمندترین)','fin',0,0,'s r')+'</div>':''}</div>`;
+ if(!over&&S.ph=='buy'&&mine&&!S.tr){const q=B[p.pos],s=q[1]=='s',left=p.cash-q[2];h+=`<div class="ov"><div class="dlg"><div class="dh" style="background:${s?GC[q[3]]:'#667'}">${IC[q[1]]||'🏠'} ${q[0]}</div><div class="pb">${f(q[2])}<small> تومان</small></div><div class="r2"><span>پول تو الان</span><b>${f(p.cash)}</b></div><div class="r2"><span>بعد از خرید می‌ماند</span><b class="${left<100?'lo':''}">${f(left)}</b></div>${s?`<div class="r2"><span>اجاره‌ای که می‌گیری</span><b>${f(q.rent[0])}</b></div><div class="r2"><span>اجاره با هتل</span><b>${f(q.rent[5])}</b></div><div class="r2"><span>قیمت ساخت هر خانه</span><b>${f(hc(q[3]))}</b></div>`:q[1]=='r'?'<div class="r2"><span>اجاره</span><b>۲۵ تا ۲۰۰</b></div>':'<div class="r2"><span>اجاره</span><b>۴ برابر تاس</b></div>'}<div class="hint">💡 اگر بخری، هر کس روی این خانه بیفتد به تو اجاره می‌دهد.${left<100&&left>=0?' ⚠️ بعد از خرید پولت خیلی کم می‌شود.':''}</div><div class="ask">این ملک را می‌خری؟</div>${bt('✅ می‌خرم','buy',0,p.cash<q[2])}${bt('❌ نمی‌خرم (مزایده)','auc',0,0,'r')}</div></div>`}
+ if(TB&&mi==S.t&&!S.tr){const oth=S.p.map((p,k)=>k).filter(k=>k!=mi&&!S.p[k].b);h+=`<div class="box"><b>🤝 معامله</b> (ملک دارای ساختمان قابل معامله نیست)<br>با: ${oth.map(k=>`<button class="b s" style="${TB.to==k?'outline:3px solid #000':''}" onclick="tbTo(${k})">${S.p[k].n}</button>`).join('')}`;
+  if(TB.to>=0){const L=(k,sd)=>Object.keys(S.pr).map(Number).filter(i=>S.pr[i].o==k&&tradable(i)).sort((x,y)=>x-y).map(i=>`<button class="b s" style="background:${TB[sd].includes(i)?'#c60':'#666'}" onclick="tbP('${sd}',${i})">${B[i][0]}${S.pr[i].m?' ⛔':''}</button>`).join('')||'—';
+   h+=`<br>تو می‌دهی:<br>${L(mi,'pf')}<br>پول: <input id="tf" type="number" min="0" value="${TB.gf}"><br>می‌گیری:<br>${L(TB.to,'pt')}<br>پول: <input id="tg" type="number" min="0" value="${TB.gt}"><br>${bt('ارسال پیشنهاد','tsend')}`}
+  h+=`${bt('بستن','tclose',0,0,'r')}</div>`}
+ if(SEL>=0){const q=B[SEL],o=S.pr[SEL],s=q[1]=='s';h+=`<div class="box deed"><div class="dh" style="background:${s?GC[q[3]]:'#667'}">${q[0].replace(/ ?[⬅🔒]/g,'')}</div><div class="dbody">${q[2]?`<div class="r2"><span>${q[1]=='t'?'مالیات':'قیمت خرید'}</span><b>${f(q[2])} تومان</b></div>`:''}${q[2]&&q[1]!='t'?`<div class="r2"><span>وضعیت</span><b>${o?'مالک: '+S.p[o.o].n+(o.m?' (رهن)':''):'صاحب ندارد'}</b></div>`:''}${s?[['اجاره‌ی زمین خالی',0],['با ۱ خانه',1],['با ۲ خانه',2],['با ۳ خانه',3],['با ۴ خانه',4],['با هتل',5]].map(([l,k])=>`<div class="r2"><span>${l}</span><b>${f(q.rent[k])}</b></div>`).join('')+`<div class="r2"><span>قیمت ساخت هر خانه</span><b>${f(hc(q[3]))}</b></div><div class="r2"><span>رهن (پول نقد می‌گیری)</span><b>+${f(q[2]/2)}</b></div><div class="hint">اگر همه‌ی ملک‌های این رنگ مال یک نفر باشد، اجاره‌ی زمین خالی دو برابر می‌شود.</div>`:q[1]=='r'?'<div class="hint">اجاره: ۲۵ / ۵۰ / ۱۰۰ / ۲۰۰ بسته به تعداد راه‌آهن‌های صاحب</div>':q[1]=='u'?'<div class="hint">اجاره: ۴ برابر تاس (اگر هر دو شرکت مال یک نفر باشد: ۱۰ برابر)</div>':''}</div></div>`}
+ const man=!over&&!S.tr&&mi>=0&&mi==S.t&&!S.p[S.t].bot&&['roll','after','debt'].includes(S.ph);
+ if(mi>=0){const mp=Object.keys(S.pr).filter(i=>S.pr[i].o==mi).map(Number).sort((x,y)=>x-y);if(mp.length)h+=`<div class="box"><b>املاک من</b>${mp.map(i=>{const q=B[i],r=S.pr[i];return`<div class="row"><span>${q[1]=='s'?`<i style="background:${GC[q[3]]};display:inline-block;width:10px;height:10px"></i> `:''}${q[0]} ${r.m?'⛔':r.h==5?'🏨':'🏠'.repeat(r.h)} <small class="hint">ارزش ${f(q[2])}</small></span><span>${man?(q[1]=='s'?bt('🏠 ساخت −'+f(hc(q[3])),'bld',i,0,'s')+bt('فروش خانه +'+f(hc(q[3])/2),'sel',i,0,'s'):'')+bt(r.m?'آزادسازی −'+f(Math.ceil(q[2]*.55)):'رهن +'+f(q[2]/2),'mtg',i,0,'s alt'):''}</span></div>`}).join('')}</div>`}
+ app.innerHTML=h;botStep()}
+const _A=A;window.A=(k,x)=>{if(k=='mkk')return mk();if(k=='jnn')return jn();if(k=='addpp')return addp();if(k=='trade')return tbOpen();if(k=='tsend')return tbSend();if(k=='tclose'){TB=null;return render()}if(k=='fin'){if(!FC||Date.now()-FC>4000){FC=Date.now();return toast('برای پایان بازی دوباره بزن')}FC=0}_A(k,x)};
+render();
+</script></body></html>
