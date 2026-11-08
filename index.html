@@ -151,6 +151,39 @@ body.v3 .q{box-shadow:0 5px 0 #8a6a2a,0 9px 10px #0007,inset 0 2px 3px #fff,inse
 #bd{border-width:8px;box-shadow:0 14px 34px #0009,0 0 0 2px #b8913a}
 .box{box-shadow:0 4px 14px #0005;border-radius:16px}
 .nm{letter-spacing:0}.q:active{filter:brightness(.95)}
+</style><style>
+.gpick{display:flex;gap:10px;margin:6px 0 10px}.gp{flex:1;padding:14px 8px;border-radius:16px;border:2px solid #ffffff30;background:#ffffff12;color:inherit;font:800 16px Vazirmatn,sans-serif;cursor:pointer;line-height:1.7}.gp.sel{border-color:#fbbf24;background:#fbbf2426;box-shadow:0 0 0 2px #fbbf2455}
+#mbw{width:min(100%,600px);margin:10px auto;padding:11px;border-radius:22px;box-sizing:border-box;background:linear-gradient(135deg,#9a6633,#5e3a17 40%,#855529 70%,#4a2c0c);box-shadow:0 18px 40px #000a,inset 0 2px 3px #ffffff45,inset 0 -3px 6px #0008}
+#mb{direction:ltr;position:relative;display:grid;grid:repeat(15,1fr)/repeat(15,1fr);aspect-ratio:1;border-radius:10px;background:#f7f0dd;box-shadow:inset 0 0 0 2px #0005,inset 0 4px 14px #0004}
+.yd{position:relative;margin:1px;border-radius:16px;background:radial-gradient(circle at 30% 25%,var(--l),var(--c) 55%,var(--d));box-shadow:inset 0 0 0 3px #fff6,inset 0 -6px 12px #0003,0 2px 5px #0004}
+.yd::before{content:"";position:absolute;inset:15%;border-radius:14px;background:linear-gradient(145deg,#fffdf6,#efe7d0);box-shadow:inset 0 2px 6px #0003}
+.yd.on{box-shadow:0 0 0 3px #fff,0 0 20px 2px var(--c),inset 0 -6px 12px #0003}.yd.off{filter:grayscale(.75);opacity:.5}
+.slot{position:absolute;width:6.6%;aspect-ratio:1;border-radius:50%;transform:translate(-50%,-50%);background:radial-gradient(circle at 40% 35%,var(--d),var(--c));box-shadow:inset 0 3px 5px #0008,0 1px 0 #fff9}
+.tc{position:relative;display:grid;place-items:center;margin:.5px;border-radius:4px;background:linear-gradient(145deg,#fff,#eee6d2);box-shadow:inset 0 0 0 1px #0000001c,0 1px 1px #0002}
+.tc.ts{background:radial-gradient(circle at 35% 30%,var(--c),var(--d))}
+.arw{color:#fff;font-size:min(3.2vw,17px);line-height:1;text-shadow:0 1px 2px #0007}.str{color:#d97706;font-size:min(3.6vw,19px);line-height:1;text-shadow:0 1px 0 #fff}
+.hcl{margin:.5px;border-radius:4px;background:linear-gradient(145deg,var(--c),var(--d));box-shadow:inset 0 1px 0 #fff7,inset 0 -2px 3px #0004}
+.ctr{position:relative;margin:1px;border-radius:8px;background:conic-gradient(from -45deg,#16a34a 0 25%,#eab308 0 50%,#2563eb 0 75%,#dc2626 0);box-shadow:inset 0 0 0 2px #fff9,0 2px 5px #0005}
+.ctr::after{content:"";position:absolute;inset:33%;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#fde68a 60%,#d97706);box-shadow:0 0 0 2px #fff9,0 2px 4px #0006}
+#mpl{position:absolute;inset:0;pointer-events:none;z-index:3}
+.pw{position:absolute;width:6.6%;aspect-ratio:1/1.55;transform:translate(-50%,-80%) scale(var(--sz,1));transform-origin:50% 100%;transition:left var(--st,.15s) ease-in-out,top var(--st,.15s) ease-in-out;filter:drop-shadow(0 3px 2px #0009)}
+.pw.nt{transition:none}.pw b{position:absolute;display:block}
+.pb{bottom:0;left:2%;width:96%;height:28%;border-radius:50%;background:radial-gradient(ellipse at 50% 25%,var(--l),var(--c) 45%,var(--d));box-shadow:inset 0 -2px 3px #0005}
+.pt{bottom:10%;left:20%;width:60%;height:60%;border-radius:46% 46% 22% 22%/70% 70% 22% 22%;background:linear-gradient(90deg,var(--d),var(--l) 38%,var(--c) 62%,var(--d))}
+.ph{top:0;left:25%;width:50%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,var(--l) 25%,var(--c) 60%,var(--d))}
+.pw.mvb{pointer-events:auto;cursor:pointer;animation:mbob .8s ease-in-out infinite alternate}
+.pw.mvb::before{content:"";position:absolute;left:-12%;bottom:-3%;width:124%;height:34%;border-radius:50%;box-shadow:0 0 0 3px #fde047,0 0 12px 4px #fde047aa}
+.pw.mvb::after{content:"";position:absolute;inset:-25% -40%}
+@keyframes mbob{to{transform:translate(-50%,-92%) scale(var(--sz,1))}}
+.pw.hp{animation:mhop .2s}@keyframes mhop{50%{transform:translate(-50%,-135%) scale(var(--sz,1))}}
+.boom{position:absolute;font-size:min(7vw,34px);transform:translate(-50%,-50%);animation:mboom .65s forwards;z-index:9}@keyframes mboom{from{transform:translate(-50%,-50%) scale(.3);opacity:1}to{transform:translate(-50%,-110%) scale(1.7);opacity:0}}
+.cw{perspective:420px;width:64px;height:64px;margin:8px 12px;flex:none}.cw[onclick]{cursor:pointer}
+.cube{width:64px;height:64px;position:relative;transform-style:preserve-3d;transition:transform .4s}
+.cube.rl3{animation:dice3 .75s cubic-bezier(.2,.7,.3,1)}@keyframes dice3{from{transform:rotateX(900deg) rotateY(720deg) rotateZ(180deg) translateY(-70px)}}
+.cf{position:absolute;inset:0;display:grid;grid:repeat(3,1fr)/repeat(3,1fr);padding:13%;box-sizing:border-box;background:linear-gradient(145deg,#fff,#dcdcdc);border-radius:12px;box-shadow:inset 0 0 0 2px #00000014}
+.cf i{display:block;width:76%;height:76%;margin:auto;border-radius:50%;background:radial-gradient(circle at 35% 30%,#555,#111)}.f1 i{background:radial-gradient(circle at 35% 30%,#f87171,#b91c1c)}
+.f1{transform:translateZ(32px)}.f2{transform:rotateY(90deg) translateZ(32px)}.f3{transform:rotateX(90deg) translateZ(32px)}.f4{transform:rotateX(-90deg) translateZ(32px)}.f5{transform:rotateY(-90deg) translateZ(32px)}.f6{transform:rotateY(180deg) translateZ(32px)}
+.mrow{display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap}
 </style></head><body><div id="app"></div>
 <script>
 const B=[["شروع ⬅","g"],["زاهدان","s",60,0],["صندوق جامعه","c"],["ایلام","s",60,0],["مالیات درآمد","t",200],["راه‌آهن جنوب","r",200],["یاسوج","s",100,1],["شانس","h"],["خرم‌آباد","s",100,1],["بوشهر","s",120,1],["زندان 🔒","j"],["اراک","s",140,2],["شرکت برق","u",150],["همدان","s",140,2],["کرمانشاه","s",160,2],["راه‌آهن شمال","r",200],["قزوین","s",180,3],["صندوق جامعه","c"],["ساری","s",180,3],["اهواز","s",200,3],["پارکینگ آزاد","p"],["کرمان","s",220,4],["شانس","h"],["یزد","s",220,4],["قم","s",240,4],["راه‌آهن شرق","r",200],["تبریز","s",260,5],["اصفهان","s",260,5],["شرکت آب","u",150],["شیراز","s",280,5],["برو زندان","J"],["مشهد","s",300,6],["رامسر","s",300,6],["صندوق جامعه","c"],["کیش","s",320,6],["راه‌آهن غرب","r",200],["شانس","h"],["تهران ولیعصر","s",350,7],["مالیات لوکس","t",100],["تهران زعفرانیه","s",400,7]];
@@ -192,9 +225,9 @@ function build(i){const q=B[i],r=S.pr[i],g=grp(q[3]),p=cur();if(p.ln)return lg('
 function sell(i){const q=B[i],r=S.pr[i],g=grp(q[3]);if(!r.h||g.some(j=>S.pr[j].h>r.h))return;if(r.h==5&&houses()[0]>28){lg('خانه کافی در بانک نیست');return}const w=r.h==5?'هتل':'خانه';r.h--;cur().cash+=bc(q[3],r.h)/2;lg(cur().n+' '+w+' فروخت: +'+f(bc(q[3],r.h)/2))}
 function mtg(i){const q=B[i],r=S.pr[i],p=cur();if(r.m){const c=Math.ceil(q[2]*.55);if(p.cash>=c){p.cash-=c;r.m=0}}else if(q[1]!='s'||grp(q[3]).every(j=>!S.pr[j]||!S.pr[j].h)){r.m=1;p.cash+=q[2]/2}}
 function bust(){const p=cur(),d=S.debt;for(const i in S.pr){const r=S.pr[i];if(r.o==S.t){if(d&&d.to>=0){r.o=d.to;r.h=0}else delete S.pr[i]}}if(d&&d.to>=0)S.p[d.to].cash+=Math.max(p.cash,0);p.cash=0;p.b=1;for(let k=0;k<2;k++)for(;p.gj[k]>0;p.gj[k]--)(k?S.ch:S.cc).push(GJ[k]);lg(p.n+' ورشکست شد');S.debt=null;nxt()}
-const ACT={start(){S.ph='roll';S.t=rnd(S.p.length)},roll,buy(){const p=cur(),i=p.pos;if(pay(S.t,B[i][2],-1)){S.pr[i]={o:S.t,h:0,m:0};lg(p.n+' '+B[i][0]+' را خرید');S.ph='after'}},auc,bid(x){const a=S.au;a.b+=x;a.h=a.q[a.c];adv()},ap:apass,
+const ACT={start(){if(S.g=='mench')return mStart();S.ph='roll';S.t=rnd(S.p.length)},roll,buy(){const p=cur(),i=p.pos;if(pay(S.t,B[i][2],-1)){S.pr[i]={o:S.t,h:0,m:0};lg(p.n+' '+B[i][0]+' را خرید');S.ph='after'}},auc,bid(x){const a=S.au;a.b+=x;a.h=a.q[a.c];adv()},ap:apass,
  pd(){const d=S.debt,p=S.p[d.i];if(p.cash>=d.a){p.cash-=d.a;if(d.to>=0)S.p[d.to].cash+=d.a;S.debt=null;S.ph='after'}},bust,again(){S.ph='roll'},end:nxt,
- pj(){const p=cur();if(p.cash>=50){p.cash-=50;p.jl=0;lg(p.n+' ۵۰ داد و آزاد شد')}},gj(){const p=cur(),k=p.gj[0]?0:1;p.gj[k]--;(k?S.ch:S.cc).push(GJ[k]);p.jl=0;lg(p.n+' با کارت آزاد شد')},tacc(){const t=S.tr;S.tr=null;if(vTr(t)){lg('معامله معتبر نیست');return}const F=S.p[t.from],T=S.p[t.to];F.cash+=t.gt-t.gf-ci(t.pt);T.cash+=t.gf-t.gt-ci(t.pf);t.pf.forEach(i=>S.pr[i].o=t.to);t.pt.forEach(i=>S.pr[i].o=t.from);lg('معامله بین '+F.n+' و '+T.n+' انجام شد')},tdec(){lg(S.p[S.tr.to].n+' معامله را رد کرد');S.tr=null},tcan(){S.tr=null},bld:build,sel:sell,mtg,fin(){const w=S.p.map((p,k)=>p.b?-1:p.cash-(p.ln||0)+Object.keys(S.pr).filter(i=>S.pr[i].o==k).reduce((t,i)=>t+(S.pr[i].m?B[i][2]/2:B[i][2])+(B[i][1]=='s'?(S.pr[i].h==5?6:S.pr[i].h)*hc(B[i][3]):0),0));S.w=w.indexOf(Math.max(...w));S.ph='over'},addb(){if(S.p.length<8){S.p.push(np(BN[S.p.filter(p=>p.bot).length%8]+' 🤖','B'+S.p.length));S.p[S.p.length-1].bot=1}}};
+ pj(){const p=cur();if(p.cash>=50){p.cash-=50;p.jl=0;lg(p.n+' ۵۰ داد و آزاد شد')}},gj(){const p=cur(),k=p.gj[0]?0:1;p.gj[k]--;(k?S.ch:S.cc).push(GJ[k]);p.jl=0;lg(p.n+' با کارت آزاد شد')},tacc(){const t=S.tr;S.tr=null;if(vTr(t)){lg('معامله معتبر نیست');return}const F=S.p[t.from],T=S.p[t.to];F.cash+=t.gt-t.gf-ci(t.pt);T.cash+=t.gf-t.gt-ci(t.pf);t.pf.forEach(i=>S.pr[i].o=t.to);t.pt.forEach(i=>S.pr[i].o=t.from);lg('معامله بین '+F.n+' و '+T.n+' انجام شد')},tdec(){lg(S.p[S.tr.to].n+' معامله را رد کرد');S.tr=null},tcan(){S.tr=null},bld:build,sel:sell,mtg,fin(){const w=S.p.map((p,k)=>p.b?-1:p.cash-(p.ln||0)+Object.keys(S.pr).filter(i=>S.pr[i].o==k).reduce((t,i)=>t+(S.pr[i].m?B[i][2]/2:B[i][2])+(B[i][1]=='s'?(S.pr[i].h==5?6:S.pr[i].h)*hc(B[i][3]):0),0));S.w=w.indexOf(Math.max(...w));S.ph='over'},addb(){if(S.p.length<(S.g=='mench'?4:8)){S.p.push(np(BN[S.p.filter(p=>p.bot).length%8]+' 🤖','B'+S.p.length));S.p[S.p.length-1].bot=1}}};
 function A(k,x){if(!S||!ACT[k])return;ACT[k](x);save()}
 
 const botV=(i,a)=>{const q=B[i];let v=q[2];if(q[1]=='s'){const g=grp(q[3]),m=g.filter(j=>S.pr[j]&&S.pr[j].o===a).length,op=g.filter(j=>S.pr[j]&&S.pr[j].o!==a);if(m>=g.length-1)v*=1.8;else if(m)v*=1.25;if(op.length>=g.length-1&&op.every(j=>S.pr[j].o===S.pr[op[0]].o))v*=1.7;if(q[3]>=3&&q[3]<=5)v*=1.15}else if(q[1]=='r')v*=1+.25*cnt(a,'r');else v*=1.1;return v*YL(i)};
@@ -266,9 +299,9 @@ function chatDraw(){const l=$('cls');if(!l||!CT.msgs)return;const b=l.scrollHeig
 async function chatPoll(){try{if(!code||!CT.on)return;const r=await fetch(CT.u+'?code=eq.'+encodeURIComponent(code)+'&order=id.desc&limit=60&select=id,pid,name,msg',{headers:CT.H});if(!r.ok)return;const j=(await r.json()).reverse(),ls=j.length?j[j.length-1].id:0;if(ls===CT.last&&CT.msgs)return;const fresh=j.filter(m=>m.id>CT.last&&m.pid!=ID).length;CT.msgs=j;CT.last=ls;if(CT.init&&S&&(local||S.p.find(p=>!p.bot).id==ID))j.filter(m=>m.id>(CT.bs||0)&&!(''+m.pid).startsWith('bot')).forEach(m=>botChat(m.msg,m.name));CT.bs=ls;if(CT.open){CT.seen=ls;chatDraw()}else if(fresh&&CT.init){const n=j.filter(m=>m.id>CT.seen&&m.pid!=ID).length,d=$('cbd');CT.n=n;if(d){d.textContent=n;d.style.display='block'}tn(880,.12,'triangle',.12,0)}else if(!CT.init)CT.seen=ls;CT.init=1}catch(e){}}
 async function chatSend(){const i=$('cin'),m=(i.value||'').trim();if(!m)return;const me=S&&(S.p.find(p=>p.id==ID)||(local?S.p[S.t]:null));i.value='';if(!CT.on){chatPush({id:Date.now(),pid:ID,name:me?me.n:'ناشناس',msg:m.slice(0,200)});botChat(m,me?me.n:'');return}try{const r=await fetch(CT.u,{method:'POST',headers:{...CT.H,Prefer:'return=minimal'},body:JSON.stringify({code:String(code),pid:String(ID),name:me?me.n:'ناشناس',msg:m.slice(0,200)})});if(!r.ok)toast('پیام ارسال نشد');chatPoll()}catch(e){toast('پیام ارسال نشد')}}
 function sub(){chatInit();try{location.hash=code}catch(e){}ref.onSnapshot(sn=>{if(sn.exists){const n=JSON.parse(sn.data().s);if(!S||(n.v||0)>=(S.v||0)){S=n;render()}}})}
-async function mk(){const n=$('n').value.trim();if(!n)return toast('اسمت را بنویس');await init();code=''+(1000+rnd(9000));ref=db?db.doc('games/'+code):shim();S=ns();S.p.push(np(n,local?'L0':0));save();sub()}
-async function jn(){const n=$('n').value.trim();code=$('c').value.trim();if(!n||!code)return toast('اسم و کد بازی را بنویس');await init();if(local)return toast('حالت آنلاین فعال نیست');ref=db.doc('games/'+code);const sn=await ref.get();if(!sn.exists)return toast('بازی پیدا نشد');S=JSON.parse(sn.data().s);if(S.ph=='lobby'&&!S.p.some(p=>p.id==ID)){if(S.p.length>=8)return toast('ظرفیت پر است');S.p.push(np(n));S.v=(S.v||0)+1;await ref.set({s:JSON.stringify(S)})}sub();render()}
-function addp(){const n=$('n').value.trim();if(n&&S.p.length<8){S.p.push(np(n,'L'+S.p.length));save()}}
+async function mk(){const n=$('n').value.trim();if(!n)return toast('اسمت را بنویس');await init();code=''+(1000+rnd(9000));ref=db?db.doc('games/'+code):shim();S=ns();if(GT=='mench')S.g='mench';S.p.push(np(n,local?'L0':0));save();sub()}
+async function jn(){const n=$('n').value.trim();code=$('c').value.trim();if(!n||!code)return toast('اسم و کد بازی را بنویس');await init();if(local)return toast('حالت آنلاین فعال نیست');ref=db.doc('games/'+code);const sn=await ref.get();if(!sn.exists)return toast('بازی پیدا نشد');S=JSON.parse(sn.data().s);if(S.ph=='lobby'&&!S.p.some(p=>p.id==ID)){if(S.p.length>=(S.g=='mench'?4:8))return toast('ظرفیت پر است');S.p.push(np(n));S.v=(S.v||0)+1;await ref.set({s:JSON.stringify(S)})}sub();render()}
+function addp(){const n=$('n').value.trim();if(n&&S.p.length<(S.g=='mench'?4:8)){S.p.push(np(n,'L'+S.p.length));save()}}
 const P=i=>i<=10?[11,11-i]:i<=20?[11-(i-10),1]:i<=30?[1,1+(i-20)]:[1+(i-30),11];
 const bt=(l,k,x,d,c)=>`<button class="b ${c||''}" ${d?'disabled':''} onclick="A('${k}',${x||0})">${l}</button>`;
 
@@ -333,7 +366,8 @@ if(k>=0){if(/خرید/.test(l))t=P(['این ملک مال منه 😎','خوب �
 else{const bs=S.p.map((p,i)=>i).filter(i=>S.p[i].bot&&!S.p[i].b);if(!bs.length)return;k=bs[rnd(bs.length)];if(/ورشکست/.test(l))t='آخیش یه رقیب کمتر 😏';else if(/هتل ساخت/.test(l))t='وای هتل! 🏨 حواسم بهت هست';else if(/مزایده/.test(l))t='مزایده‌ست؟ من هستم! 🔨'}
 if(k>=0&&t)setTimeout(()=>botSay(k,t),800+rnd(1200))}
 function render(){const app=$('app');document.body.classList.toggle('v3',V3>2);if(TB&&$('tf')){TB.gf=+$('tf').value||0;TB.gt=+$('tg').value||0}
- if(!S){app.innerHTML=`<div class="hero"><div class="logo big">🎲<br>مونوپولی ایرانی</div><div class="box"><p class="st"><b>۱</b>اسمت را بنویس</p><input id="n" placeholder="اسم تو"><p class="st"><b>۲</b>بازی جدید بساز، یا کد بازی دوستت را بزن</p><input id="c" placeholder="کد بازی (۴ رقم)" inputmode="numeric" value="${(location.hash||'').slice(1)}">${bt('✨ ساخت بازی جدید','mkk')}${bt('🔑 ورود با کد','jnn',0,0,'alt')}<p class="hint">تنها هستی؟ بعد از ساخت بازی، ربات اضافه کن 🤖</p><details class="guide" open><summary>📖 بازی چطور است؟</summary><ol><li>هر نفر ۱٬۵۰۰ تومان پول دارد.</li><li>تاس بریز و مهره را جلو ببر.</li><li>روی ملک بدون صاحب رسیدی؟ می‌توانی بخری.</li><li>هر کس روی ملک تو بیفتد، اجاره می‌دهد.</li><li>همه‌ی ملک‌های یک رنگ را جمع کن و ساختمان بساز تا اجاره بالا برود.</li><li>پول تمام شد؟ ملک رهن کن یا ورشکست می‌شوی. آخر بازی، ثروتمندترین برنده است.</li></ol></details><details class="sbx"><summary>☁️ ${SB.url?'آنلاین: Supabase وصل است':'اتصال به Supabase (برای بازی از چند گوشی)'}</summary><input id="su" placeholder="Project URL (https://xxxx.supabase.co)" value="${SB.url}" dir="ltr"><input id="sk" placeholder="Publishable key (sb_publishable_...)" value="${SB.key}" dir="ltr"><button class="b s" onclick="saveSb()">ذخیره و اتصال</button></details></div></div>`;return}
+ if(!S){app.innerHTML=`<div class="hero"><div class="logo big">🎲<br>مونوپولی و منچ</div><div class="box"><p class="st"><b>۱</b>اسمت را بنویس</p><input id="n" placeholder="اسم تو"><p class="st"><b>۲</b>کدام بازی را می‌خواهی؟</p><div class="gpick"><button id="g-mono" class="gp${GT=='mono'?' sel':''}" onclick="pickG('mono')">🎲<br>مونوپولی</button><button id="g-mench" class="gp${GT=='mench'?' sel':''}" onclick="pickG('mench')">🔴<br>منچ</button></div><p class="st"><b>۳</b>بازی جدید بساز، یا کد بازی دوستت را بزن</p><input id="c" placeholder="کد بازی (۴ رقم)" inputmode="numeric" value="${(location.hash||'').slice(1)}">${bt('✨ ساخت بازی جدید','mkk')}${bt('🔑 ورود با کد','jnn',0,0,'alt')}<p class="hint">تنها هستی؟ بعد از ساخت بازی، ربات اضافه کن 🤖</p><details class="guide" id="gd1" style="${GT=='mono'?'':'display:none'}" open><summary>📖 مونوپولی چطور است؟</summary><ol><li>هر نفر ۱٬۵۰۰ تومان پول دارد.</li><li>تاس بریز و مهره را جلو ببر.</li><li>روی ملک بدون صاحب رسیدی؟ می‌توانی بخری.</li><li>هر کس روی ملک تو بیفتد، اجاره می‌دهد.</li><li>همه‌ی ملک‌های یک رنگ را جمع کن و ساختمان بساز تا اجاره بالا برود.</li><li>پول تمام شد؟ ملک رهن کن یا ورشکست می‌شوی. آخر بازی، ثروتمندترین برنده است.</li></ol></details>${menchGuide(GT=='mench','gd2')}<details class="sbx"><summary>☁️ ${SB.url?'آنلاین: Supabase وصل است':'اتصال به Supabase (برای بازی از چند گوشی)'}</summary><input id="su" placeholder="Project URL (https://xxxx.supabase.co)" value="${SB.url}" dir="ltr"><input id="sk" placeholder="Publishable key (sb_publishable_...)" value="${SB.key}" dir="ltr"><button class="b s" onclick="saveSb()">ذخیره و اتصال</button></details></div></div>`;return}
+ if(S.g=='mench'){mRender();return}
  S.p.forEach((p,k)=>{if(DP[k]===undefined)DP[k]=p.pos});if(!TUTD){TUTD=1;try{if(!localStorage.getItem('mtut'))tut(0)}catch(e){}}
  const walk=S.p.some((p,k)=>DP[k]!==p.pos&&!p.b);if(walk){clearTimeout(tmr);if(!WK){WK=1;setTimeout(stepW,[0,260,150,60][SPD])}}
  const mi=local?S.t:S.p.findIndex(p=>p.id==ID),over=S.ph=='over';
@@ -363,6 +397,75 @@ function render(){const app=$('app');document.body.classList.toggle('v3',V3>2);i
  if(man&&!S.p[mi].b)h+=bank(mi);
  if(mi>=0){const mp=Object.keys(S.pr).filter(i=>S.pr[i].o==mi).map(Number).sort((x,y)=>x-y);if(mp.length)h+=`<div class="box"><b>املاک من</b>${mp.map(i=>{const q=B[i],r=S.pr[i];return`<div class="row"><span>${q[1]=='s'?`<i style="background:${GC[q[3]]};display:inline-block;width:10px;height:10px"></i> `:''}${q[0]} ${r.m?'⛔':r.h==5?'🏨':'🏠'.repeat(r.h)} <small class="hint">ارزش ${f(q[2])}</small></span><span>${man?(q[1]=='s'?(mono(mi,q[3])&&r.h<5?bt((r.h==4?'🏨 ارتقا به هتل −':'🏠 ساخت خانه −')+f(bc(q[3],r.h)),'bld',i,0,'s'):'')+(r.h?bt((r.h==5?'فروش هتل +':'فروش خانه +')+f(bc(q[3],r.h-1)/2),'sel',i,0,'s'):''):'')+bt(r.m?'آزادسازی −'+f(Math.ceil(q[2]*.55)):'رهن +'+f(q[2]/2),'mtg',i,0,'s alt'):''}</span></div>`}).join('')}</div>`}
  app.innerHTML=h;clearTimeout(HT);if(!walk){fx();botStep();quipEv();if(mine)HT=setTimeout(coach,14000)}}
+let GT='mono',MPV=null,MT=0;
+const MC=['#ef4444','#22c55e','#eab308','#3b82f6'],xy=t=>t.split(' ').map(x=>[parseInt(x[0],16),parseInt(x[1],16)]);
+const TRK=xy('61 62 63 64 65 56 46 36 26 16 06 07 08 18 28 38 48 58 69 6a 6b 6c 6d 6e 7e 8e 8d 8c 8b 8a 89 98 a8 b8 c8 d8 e8 e7 e6 d6 c6 b6 a6 96 85 84 83 82 81 80 70 60'),
+HC=['71 72 73 74 75','17 27 37 47 57','7d 7c 7b 7a 79','d7 c7 b7 a7 97'].map(xy),FN=xy('76 67 78 87'),YS=['22 23 32 33','2b 2c 3b 3c','bb bc cb cc','b2 b3 c2 c3'].map(xy);
+const MG=(()=>{const g=Array.from({length:15},()=>Array.from({length:15},()=>({bg:'#f4ecd2',cl:'',st:0})));
+ for(let r=0;r<6;r++)for(let c=0;c<6;c++){g[r][c].bg=MC[0]+'55';g[r][c+9].bg=MC[1]+'55';g[r+9][c+9].bg=MC[2]+'55';g[r+9][c].bg=MC[3]+'55'}
+ YS.forEach((L,sc)=>L.forEach(([r,c])=>{g[r][c].bg='#fffdf5';g[r][c].cl=' mbs'}));
+ TRK.forEach(([r,c],i)=>{g[r][c].bg='#fff';if(i%13==0)g[r][c].bg=MC[i/13];else if(i%13==8)g[r][c].st=1});
+ HC.forEach((L,sc)=>L.forEach(([r,c])=>g[r][c].bg=MC[sc]+'cc'));FN.forEach(([r,c],sc)=>g[r][c].bg=MC[sc]);g[7][7].bg='#fbbf24';[[6,6],[6,8],[8,6],[8,8]].forEach(([r,c])=>g[r][c].bg='#d6c79a');return g})();
+const mCell=(sc,rp,i)=>rp<0?YS[sc][i]:rp<=50?TRK[(13*sc+rp)%52]:rp<=55?HC[sc][rp-51]:FN[sc];
+const menchGuide=(show,id)=>`<details class="guide" id="${id}" style="${show?'':'display:none'}" open><summary>📖 منچ چطور است؟</summary><ol><li>هر نفر ۴ مهره دارد. هدف: همه‌ی مهره‌ها را به خانه‌ی وسط برسان.</li><li>برای بیرون آوردن مهره از خانه‌ی اول باید ۶ بیاوری.</li><li>۶ آوردی یا مهره‌ی حریف را زدی؟ دوباره تاس می‌ریزی (سه ۶ پشت‌هم: نوبتت می‌سوزد).</li><li>روی مهره‌ی حریف بیفتی، او به خانه‌ی اولش برمی‌گردد؛ ولی روی خانه‌ی ستاره‌دار و خانه‌ی شروع رنگی امن است.</li><li>برای ورود به مقصد باید دقیقاً همان عدد لازم را بیاوری.</li></ol></details>`;
+function pickG(g){GT=g;['mono','mench'].forEach(x=>{const e=$('g-'+x);if(e)e.className='gp'+(x==g?' sel':'')});const a=$('gd1'),b=$('gd2');if(a)a.style.display=g=='mono'?'':'none';if(b)b.style.display=g=='mench'?'':'none'}
+function mStart(){const n=S.p.length;S.p.forEach((p,k)=>p.sc=n==2?[0,2][k]:k);S.pc=S.p.map(()=>[-1,-1,-1,-1]);S.t=rnd(n);S.ph='roll';S.dd=0;S.rv=0;S.sx=0;S.mm=[];S.cx=0;S.lm=null;lg('🔴 بازی منچ شروع شد')}
+const mLegal=(k,d)=>{const a=S.pc[k],ms=a.map((rp,i)=>rp<0?(d==6?i:-1):(rp+d<=56?i:-1)).filter(i=>i>=0);return ms.filter((i,j)=>ms.findIndex(x=>a[x]==a[i])==j)};
+function mNext(){S.sx=0;S.mm=[];S.t=(S.t+1)%S.p.length;S.ph='roll'}
+function mDo(i){const k=S.t,P=S.p[k],a=S.pc[k],rp=a[i],d=S.dd,nr=rp<0?0:rp+d;a[i]=nr;S.lm=[k,i];let bonus=d==6;
+ if(nr<=50){const ab=(13*P.sc+nr)%52;if(ab%13!=0&&ab%13!=8)S.p.forEach((q,j)=>{if(j==k)return;S.pc[j].forEach((r2,x)=>{if(r2>=0&&r2<=50&&(13*q.sc+r2)%52==ab){S.pc[j][x]=-1;S.cx=(S.cx||0)+1;bonus=true;lg('💥 '+P.n+' مهره‌ی '+q.n+' را زد!')}})})}
+ if(nr==56){bonus=true;lg('🏁 '+P.n+' یک مهره را به مقصد رساند')}
+ if(a.every(x=>x==56)){S.ph='over';S.w=k;S.mm=[];lg('🏆 '+P.n+' برنده شد');return}
+ S.mm=[];if(bonus)S.ph='roll';else mNext()}
+ACT.mroll=()=>{if(S.ph!='roll')return;const k=S.t,d=1+rnd(6);S.dd=d;S.rv=(S.rv||0)+1;S.lm=null;
+ if(d==6){S.sx=(S.sx||0)+1;if(S.sx>=3){lg(S.p[k].n+' سه ۶ پشت‌هم آورد؛ نوبتش می‌سوزد');return mNext()}}else S.sx=0;
+ const ms=mLegal(k,d);if(!ms.length){lg(S.p[k].n+' '+d+' آورد؛ حرکتی ندارد');return mNext()}
+ S.mm=ms;if(ms.length==1)return mDo(ms[0]);S.ph='move'};
+ACT.mmv=i=>{if(S.ph=='move'&&S.mm.includes(i))mDo(i)};
+function mDanger(k,nr){if(nr<0||nr>50)return 0;const ab=(13*S.p[k].sc+nr)%52;if(ab%13==0||ab%13==8)return 0;let t=0;S.p.forEach((q,j)=>{if(j==k)return;S.pc[j].forEach(r2=>{if(r2>=0&&r2<=50){const dd=(ab-(13*q.sc+r2)%52+52)%52;if(dd>=1&&dd<=6&&r2+dd<=50)t++}})});return t}
+function mPick(k){const a=S.pc[k],d=S.dd;let best=S.mm[0],bs=-1e9;for(const i of S.mm){const rp=a[i],nr=rp<0?0:rp+d;let sc=nr*.4+Math.random()*3;
+ if(nr<=50){const ab=(13*S.p[k].sc+nr)%52;if(ab%13!=0&&ab%13!=8)S.p.forEach((q,j)=>{if(j!=k)S.pc[j].forEach(r2=>{if(r2>=0&&r2<=50&&(13*q.sc+r2)%52==ab)sc+=100+r2})});else sc+=18}
+ if(nr==56)sc+=90;else if(nr>50)sc+=35;if(rp<0)sc+=55;sc+=mDanger(k,rp)*28-mDanger(k,nr)*32;if(sc>bs){bs=sc;best=i}}return best}
+function mBot(){clearTimeout(MT);if(!S||S.g!='mench'||S.ph=='lobby'||S.ph=='over')return;const p=S.p[S.t];if(!p.bot)return;const h=S.p.find(q=>!q.bot);if(!(local||(h&&h.id==ID)))return;
+ MT=setTimeout(()=>{if(!S||S.ph=='over'||!S.p[S.t].bot)return;if(S.ph=='roll')A('mroll');else if(S.ph=='move')A('mmv',mPick(S.t))},[0,900,450,150][SPD])}
+const MD=['#991b1b','#166534','#a16207','#1e40af'],ML=['#fecaca','#bbf7d0','#fef08a','#bfdbfe'];
+let MDP=null,MBZ=0,MQ=[],MTM=0;
+const mxy=(sc,rp,i)=>{const[r,c]=mCell(sc,rp,i);return[(c+.5)*100/15,(r+.5)*100/15,r*15+c]};
+function mPlace(){const g={};S.p.forEach((p,k)=>MDP[k].forEach((rp,i)=>{const[x,y,key]=mxy(p.sc,rp,i);(g[key]=g[key]||[]).push([k,i,x,y])}));
+ for(const key in g){const L=g[key],n=L.length;L.forEach(([k,i,x,y],m)=>{const e=document.getElementById('pw'+k+'_'+i);if(!e)return;e.style.left=(x+(m-(n-1)/2)*2.4)+'%';e.style.top=(y+(n>1?(m%2?.7:-.7):0))+'%';e.style.zIndex=Math.round(y*10)+m;e.style.setProperty('--sz',n>1?'.82':'1')})}}
+function mDiff(){const q=[];S.p.forEach((p,k)=>S.pc[k].forEach((rp,i)=>{const d=MDP[k][i];if(d===rp)return;if(rp<0)q.push({k,i,rp:-1,cap:1,sc:p.sc,from:d});else if(d<0||rp-d>12||rp<d)q.push({k,i,rp});else for(let r=d+1;r<=rp;r++)q.push({k,i,rp:r})}));return q.filter(x=>!x.cap).concat(q.filter(x=>x.cap))}
+function mBoom(sc,rp,i){const[x,y]=mxy(sc,rp,i),l=document.getElementById('mpl');if(!l)return;const e=document.createElement('div');e.className='boom';e.textContent='💥';e.style.left=x+'%';e.style.top=y+'%';l.appendChild(e);setTimeout(()=>e.remove(),700)}
+function mRun(){const st=[0,170,110,60][SPD];if(!MQ.length){MBZ=0;mRender();return}
+ const m=MQ.shift();if(m.cap)mBoom(m.sc,m.from,m.i);MDP[m.k][m.i]=m.rp;const e=document.getElementById('pw'+m.k+'_'+m.i);
+ if(e){e.style.setProperty('--st',(m.cap?.45:st/1000)+'s');e.classList.remove('hp');void e.offsetWidth;if(!m.cap)e.classList.add('hp')}
+ mPlace();if(m.cap)snd('pay');else tn(520+(m.rp%8)*40,.07,'triangle',.1,0);MTM=setTimeout(mRun,m.cap?520:st+12)}
+const mf=n=>`<div class="cf f${n}">`+PIP[n].map(c=>`<i style="grid-area:${Math.ceil(c/3)}/${(c-1)%3+1}"></i>`).join('')+'</div>';
+const MROT={1:'rotateX(0deg) rotateY(0deg)',2:'rotateY(-90deg)',3:'rotateX(-90deg)',4:'rotateX(90deg)',5:'rotateY(90deg)',6:'rotateY(180deg)'};
+function mRender(){if(MBZ&&Date.now()-MBZ<9000)return;MBZ=0;
+ const app=$('app'),over=S.ph=='over',lob=S.ph=='lobby',mi=local?S.t:S.p.findIndex(p=>p.id==ID),cp=S.p[S.t];
+ if(lob)MDP=null;else if(!MDP||MDP.length!=S.p.length)MDP=S.pc.map(a=>a.slice());
+ const dq=lob?[]:mDiff(),busy=dq.length>0,mine=!over&&!lob&&!!cp&&!cp.bot&&(local||cp.id==ID)&&!busy,rolled=!!MPV&&!lob&&S.rv!==MPV.rv;
+ if(MPV&&!lob){if(rolled)snd('dice');if(mine&&(!MPV.mine||MPV.t!==S.t))snd('turn')}
+ let h=`<div class="top"><div class="logo">🔴 منچ</div><button class="b s" onclick="tgs()">${['','🐢 عادی','⏩ سریع','⚡ فوری'][SPD]}</button><button class="b s" onclick="mute()">${MUTE?'🔇':'🔊'}</button>${CT.el?`<button id="cbt" class="b s" onclick="chatTg()">💬<i id="cbd" style="display:${CT.n?'block':'none'}">${CT.n||''}</i></button>`:''}<div class="code">کد بازی <b>${code}</b> ${local?'(یک‌دستگاهی)':''}</div></div>`;
+ h+=`<div class="pcs">${S.p.map((p,k)=>{const sc=p.sc===undefined?k:p.sc,fin=lob?0:S.pc[k].filter(x=>x==56).length;return`<div class="pc${!lob&&k==S.t&&!over?' on':''}" style="border-color:${MC[sc]}"><span class="av" style="background:${MC[sc]}">${p.bot?'🤖':p.n[0]}</span><span>${p.n}${k==mi?' (تو)':''}${lob?'':'<br><span class="cash">🏁 '+fin+'/۴</span>'}</span></div>`}).join('')}</div>`;
+ if(lob){h+=`<div class="box"><b>در انتظار بازیکنان…</b> (۲ تا ۴ نفر)<br>کد بازی را به دوستت بده: <b class="bigcode">${code}</b><br>${local?'<input id="n" placeholder="اسم بازیکن"> '+bt('افزودن','addpp'):''}${(local||S.p[0].id==ID)?bt('🤖 افزودن ربات','addb',0,S.p.length>=4):''}${(local||S.p[0].id==ID)?bt('شروع بازی','start',0,S.p.length<2):'منتظر باش تا سازنده بازی را شروع کند'}</div>`+menchGuide(true,'gd3');app.innerHTML=h;MPV=null;return}
+ const used=S.p.map(p=>p.sc),cs=cp?cp.sc:-1;
+ let b='<div id="mbw"><div id="mb">';
+ for(let q=0;q<4;q++){const r0=q<2?1:10,c0=(q==0||q==3)?1:10;b+=`<div class="yd${q==cs&&!over?' on':''}${used.includes(q)?'':' off'}" style="grid-area:${r0}/${c0}/${r0+6}/${c0+6};--c:${MC[q]};--d:${MD[q]};--l:${ML[q]}"></div>`}
+ TRK.forEach(([r,c],i)=>{const st=i%13==0,sr=i%13==8;b+=`<div class="tc${st?' ts':''}" style="grid-area:${r+1}/${c+1};${st?`--c:${MC[i/13]};--d:${MD[i/13]}`:''}">${st?`<b class="arw" style="transform:rotate(${i/13*90}deg)">➤</b>`:''}${sr?'<b class="str">★</b>':''}</div>`});
+ HC.forEach((L,q)=>L.forEach(([r,c])=>b+=`<div class="hcl" style="grid-area:${r+1}/${c+1};--c:${MC[q]};--d:${MD[q]}"></div>`));
+ b+='<div class="ctr" style="grid-area:7/7/10/10"></div><div id="mpl">';
+ YS.forEach((L,q)=>L.forEach(([r,c])=>b+=`<i class="slot" style="left:${(c+.5)*100/15}%;top:${(r+.5)*100/15}%;--c:${MC[q]};--d:${MD[q]}"></i>`));
+ S.p.forEach((p,k)=>S.pc[k].forEach((_,i)=>{const mv=mine&&S.ph=='move'&&k==S.t&&S.mm.includes(i);b+=`<div id="pw${k}_${i}" class="pw nt${mv?' mvb':''}" style="--c:${MC[p.sc]};--d:${MD[p.sc]};--l:${ML[p.sc]}"${mv?` onclick="A('mmv',${i})"`:''}><b class="pb"></b><b class="pt"></b><b class="ph"></b></div>`}));
+ b+='</div></div></div>';h+=b;
+ const roll=mine&&S.ph=='roll',c=over?`🏆 برنده: <b>${S.p[S.w].n}</b>`:`نوبت <b style="color:${MC[cp.sc]}">${cp.n}</b>: `+(busy?'🚶 مهره در حال حرکت…':!mine?'در حال بازی…':roll?bt('🎲 تاس بریز','mroll'):'👆 روی یکی از مهره‌های پرنور بزن'),
+ tp=mine?(roll?'🎲 تاس بریز (یا روی تاس بزن)؛ ۶ بیاوری مهره بیرون می‌آید و دوباره می‌ریزی':'👆 مهره‌های دارای حلقه‌ی زرد را می‌توانی حرکت بدهی'):'';
+ h+=`<div class="box act${mine?' mine':''}">${tp?'<div class="tip">'+tp+'</div>':''}<div class="mrow"><div class="cw"${roll?` onclick="A('mroll')"`:''}><div class="cube${rolled?' rl3':''}" style="transform:${MROT[S.dd||1]}">${[1,2,3,4,5,6].map(mf).join('')}</div></div><div>${c}</div></div></div><div class="box"><div class="lg">${S.log.slice(0,3).map(x=>`<div>${x}</div>`).join('')}</div></div>`;
+ if(over&&!busy)h+=`<div class="ov"><div class="dlg"><div class="win">🏆</div><div class="ask">${S.p[S.w].n} برنده شد!</div><button class="b" onclick="location.reload()">بازی تازه</button></div></div>`;
+ app.innerHTML=h;mPlace();void app.offsetWidth;document.querySelectorAll('.pw.nt').forEach(e=>e.classList.remove('nt'));
+ MPV={rv:S.rv,t:S.t,mine};
+ if(busy){MQ=dq;MBZ=Date.now();clearTimeout(MTM);MTM=setTimeout(mRun,rolled?800:80);return}
+ mBot()}
 const _A=A;window.A=(k,x)=>{if(k=='mkk')return mk();if(k=='jnn')return jn();if(k=='addpp')return addp();if(k=='trade')return tbOpen();if(k=='tsend')return tbSend();if(k=='tclose'){TB=null;return render()}if(k=='fin'){if(!FC||Date.now()-FC>4000){FC=Date.now();return toast('برای پایان بازی دوباره بزن')}FC=0}_A(k,x)};
 render();
 </script></body></html>
